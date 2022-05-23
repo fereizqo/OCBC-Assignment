@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49A8B5C0283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
+		49A8B5C1283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
+		49A8B5C2283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
+		49A8B5C5283C417F0004C0A1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5C4283C417F0004C0A1 /* LoginView.swift */; };
+		49A8B5C6283C417F0004C0A1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5C4283C417F0004C0A1 /* LoginView.swift */; };
+		49A8B5C7283C417F0004C0A1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5C4283C417F0004C0A1 /* LoginView.swift */; };
+		49A8B5C9283C48D80004C0A1 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5C8283C48D80004C0A1 /* WhiteButton.swift */; };
+		49A8B5CA283C48D80004C0A1 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5C8283C48D80004C0A1 /* WhiteButton.swift */; };
+		49A8B5CB283C48D80004C0A1 /* WhiteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5C8283C48D80004C0A1 /* WhiteButton.swift */; };
+		49A8B5CD283C49150004C0A1 /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5CC283C49150004C0A1 /* BlackButton.swift */; };
+		49A8B5CE283C49150004C0A1 /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5CC283C49150004C0A1 /* BlackButton.swift */; };
+		49A8B5CF283C49150004C0A1 /* BlackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5CC283C49150004C0A1 /* BlackButton.swift */; };
 		49D67DB32839D91B00EBE443 /* OCBCAssignmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D67DB22839D91B00EBE443 /* OCBCAssignmentApp.swift */; };
 		49D67DB52839D91B00EBE443 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D67DB42839D91B00EBE443 /* ContentView.swift */; };
 		49D67DB72839D91D00EBE443 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49D67DB62839D91D00EBE443 /* Assets.xcassets */; };
@@ -34,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTextField.swift; sourceTree = "<group>"; };
+		49A8B5C4283C417F0004C0A1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		49A8B5C8283C48D80004C0A1 /* WhiteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteButton.swift; sourceTree = "<group>"; };
+		49A8B5CC283C49150004C0A1 /* BlackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackButton.swift; sourceTree = "<group>"; };
 		49D67DAF2839D91B00EBE443 /* OCBCAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OCBCAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49D67DB22839D91B00EBE443 /* OCBCAssignmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OCBCAssignmentApp.swift; sourceTree = "<group>"; };
 		49D67DB42839D91B00EBE443 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				49D67DB42839D91B00EBE443 /* ContentView.swift */,
+				49A8B5C3283C41510004C0A1 /* Login */,
+				49A8B5BE283C3C840004C0A1 /* Helpers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -92,6 +110,24 @@
 				49D67DB62839D91D00EBE443 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		49A8B5BE283C3C840004C0A1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */,
+				49A8B5CC283C49150004C0A1 /* BlackButton.swift */,
+				49A8B5C8283C48D80004C0A1 /* WhiteButton.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		49A8B5C3283C41510004C0A1 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				49A8B5C4283C417F0004C0A1 /* LoginView.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		49D67DA62839D91B00EBE443 = {
@@ -282,7 +318,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D67DB52839D91B00EBE443 /* ContentView.swift in Sources */,
+				49A8B5C0283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
+				49A8B5C5283C417F0004C0A1 /* LoginView.swift in Sources */,
+				49A8B5CD283C49150004C0A1 /* BlackButton.swift in Sources */,
 				49D67DB32839D91B00EBE443 /* OCBCAssignmentApp.swift in Sources */,
+				49A8B5C9283C48D80004C0A1 /* WhiteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A8B5C6283C417F0004C0A1 /* LoginView.swift in Sources */,
+				49A8B5CE283C49150004C0A1 /* BlackButton.swift in Sources */,
+				49A8B5CA283C48D80004C0A1 /* WhiteButton.swift in Sources */,
+				49A8B5C1283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
 				49D67DC42839D91E00EBE443 /* OCBCAssignmentTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +343,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D67DD02839D91E00EBE443 /* OCBCAssignmentUITestsLaunchTests.swift in Sources */,
+				49A8B5C2283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
+				49A8B5C7283C417F0004C0A1 /* LoginView.swift in Sources */,
+				49A8B5CF283C49150004C0A1 /* BlackButton.swift in Sources */,
 				49D67DCE2839D91E00EBE443 /* OCBCAssignmentUITests.swift in Sources */,
+				49A8B5CB283C48D80004C0A1 /* WhiteButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
