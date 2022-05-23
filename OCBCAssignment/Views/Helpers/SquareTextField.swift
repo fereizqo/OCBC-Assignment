@@ -24,7 +24,7 @@ struct SquareTextField: View {
             Text("Username is required")
                 .foregroundColor(.red)
         }
-        .padding(.all)
+        .padding(.horizontal)
     }
 }
 
