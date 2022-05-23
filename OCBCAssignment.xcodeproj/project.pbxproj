@@ -71,6 +71,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49A8B5BB283C3B730004C0A1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				49D67DB42839D91B00EBE443 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		49A8B5BC283C3BA10004C0A1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		49A8B5BD283C3BAD0004C0A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				49D67DB62839D91D00EBE443 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		49D67DA62839D91B00EBE443 = {
 			isa = PBXGroup;
 			children = (
@@ -95,8 +118,9 @@
 			isa = PBXGroup;
 			children = (
 				49D67DB22839D91B00EBE443 /* OCBCAssignmentApp.swift */,
-				49D67DB42839D91B00EBE443 /* ContentView.swift */,
-				49D67DB62839D91D00EBE443 /* Assets.xcassets */,
+				49A8B5BC283C3BA10004C0A1 /* Model */,
+				49A8B5BB283C3B730004C0A1 /* Views */,
+				49A8B5BD283C3BAD0004C0A1 /* Resources */,
 				49D67DB82839D91D00EBE443 /* Preview Content */,
 			);
 			path = OCBCAssignment;
