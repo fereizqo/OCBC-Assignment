@@ -9,29 +9,26 @@ import SwiftUI
 
 struct RegisterView: View {
     var body: some View {
-        NavigationView {
-            VStack {
-                SquareTextField()
-                    .padding(.top)
-                SquareTextField()
-                SquareTextField()
-                
-                Spacer()
-                
-                Button() {
-                    print("test")
-                } label: {
-                    Text("Login")
-                        .font(.title2)
-                        .bold()
-                        .foregroundColor(.white)
-                }
-                .buttonStyle(BlackButton())
-                
+        VStack {
+            SquareTextField()
+                .padding(.top)
+            SquareTextField()
+            SquareTextField()
+            
+            Spacer()
+            
+            Button() {
+                print("test")
+            } label: {
+                Text("Login")
+                    .font(.title2)
+                    .bold()
+                    .foregroundColor(.white)
             }
-            .navigationTitle("Register")
-            .navigationBarTitleDisplayMode(.large)
+            .buttonStyle(BlackButton())
         }
+        .navigationTitle("Register")
+        .navigationBarTitleDisplayMode(.large)
     }
 }
 

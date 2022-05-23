@@ -39,6 +39,10 @@ struct LoginView: View {
                     }
                     .buttonStyle(WhiteButton())
                     .padding(.bottom)
+                    
+                    NavigationLink(destination: RegisterView()) {
+                        Text("test")
+                    }
                 }
                 
             }
