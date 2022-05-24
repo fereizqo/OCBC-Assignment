@@ -8,21 +8,26 @@
 import SwiftUI
 
 struct SquareTextField: View {
-    @State var username: String = ""
+    @Binding var text: String
+    @Binding var isAlert: Bool
+    var dialogTitleText: String
+    var alertText: String
     
     var body: some View {
         VStack(alignment: .leading) {
             VStack(alignment: .leading) {
-                Text("Username")
+                Text(dialogTitleText)
                     .font(.headline)
                     .padding([.top, .leading, .trailing], 10.0)
-                TextField("Enter username", text: $username)
+                TextField(dialogTitleText, text: $text)
                     .padding([.leading, .bottom, .trailing], 10.0)
             }
             .background(RoundedRectangle(cornerRadius: 4.0).stroke(.black, lineWidth: 2.5))
             
-            Text("Username is required")
-                .foregroundColor(.red)
+            if isAlert {
+                Text(alertText)
+                    .foregroundColor(.red)
+            }
         }
         .padding(.horizontal)
     }
@@ -30,7 +35,7 @@ struct SquareTextField: View {
 
 struct SquareTextField_Previews: PreviewProvider {
     static var previews: some View {
-        SquareTextField()
+        SquareTextField(text: .constant("Test"), isAlert: .constant(true), dialogTitleText: "Username", alertText: "")
             .previewLayout(.fixed(width: 400, height: 130))
     }
 }

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4970E5D2283C9B78007A358C /* TransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5D1283C9B78007A358C /* TransferView.swift */; };
+		4970E5D3283C9B78007A358C /* TransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5D1283C9B78007A358C /* TransferView.swift */; };
+		4970E5D4283C9B78007A358C /* TransferView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5D1283C9B78007A358C /* TransferView.swift */; };
 		49A8B5C0283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
 		49A8B5C1283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
 		49A8B5C2283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
@@ -70,6 +73,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4970E5D1283C9B78007A358C /* TransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferView.swift; sourceTree = "<group>"; };
 		49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTextField.swift; sourceTree = "<group>"; };
 		49A8B5C4283C417F0004C0A1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		49A8B5D2283C4A560004C0A1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -122,6 +126,7 @@
 		4970E5D0283C9B1A007A358C /* Transfer */ = {
 			isa = PBXGroup;
 			children = (
+				4970E5D1283C9B78007A358C /* TransferView.swift */,
 			);
 			path = Transfer;
 			sourceTree = "<group>";
@@ -382,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D67DB52839D91B00EBE443 /* ContentView.swift in Sources */,
+				4970E5D2283C9B78007A358C /* TransferView.swift in Sources */,
 				49C35511283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				49A8B5C0283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
 				49BF2375283C8FC600AAE27C /* BalanceResponse.swift in Sources */,
@@ -415,6 +421,7 @@
 				49D67DC42839D91E00EBE443 /* OCBCAssignmentTests.swift in Sources */,
 				49BF2382283C910600AAE27C /* TransferResponse.swift in Sources */,
 				49C35512283C502000B7F62A /* ButtonStyle.swift in Sources */,
+				4970E5D3283C9B78007A358C /* TransferView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49D67DD02839D91E00EBE443 /* OCBCAssignmentUITestsLaunchTests.swift in Sources */,
+				4970E5D4283C9B78007A358C /* TransferView.swift in Sources */,
 				49C35513283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				49A8B5C2283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
 				49BF2377283C8FC600AAE27C /* BalanceResponse.swift in Sources */,

@@ -8,19 +8,28 @@
 import SwiftUI
 
 struct RegisterView: View {
+    @State var textUser: String
+    @State var textPassword: String
+    @State var textPasswordConfirm: String
+    @State var isAlertUser: Bool
+    @State var isAlertPassword: Bool
+    @State var isAlertPasswordConfirm: Bool
+    
     var body: some View {
         VStack {
-            SquareTextField()
+            SquareTextField(text: $textUser, isAlert: $isAlertUser, dialogTitleText: "Username", alertText: "")
                 .padding(.top)
-            SquareTextField()
-            SquareTextField()
+            SquareTextField(text: $textPassword, isAlert: $isAlertPassword, dialogTitleText: "Password", alertText: "")
+                .padding(.top)
+            SquareTextField(text: $textPasswordConfirm, isAlert: $isAlertPasswordConfirm, dialogTitleText: "Confirm Password", alertText: "")
+                .padding(.top)
             
             Spacer()
             
             Button() {
                 print("test")
             } label: {
-                Text("Login")
+                Text("Register")
                     .font(.title2)
                     .bold()
                     .foregroundColor(.white)
@@ -34,6 +43,6 @@ struct RegisterView: View {
 
 struct RegisterView_Previews: PreviewProvider {
     static var previews: some View {
-        RegisterView()
+        RegisterView(textUser: "test", textPassword: "", textPasswordConfirm: "", isAlertUser: false, isAlertPassword: false, isAlertPasswordConfirm: false)
     }
 }

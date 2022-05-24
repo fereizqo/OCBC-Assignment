@@ -11,7 +11,7 @@ import SwiftUI
 struct OCBCAssignmentApp: App {
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            LoginView(textUser: "", textPassword: "", isAlertUser: false, isAlertPassword: false)
         }
     }
 }
