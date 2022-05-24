@@ -29,19 +29,14 @@ struct LoginView: View {
                     .buttonStyle(BlackButton())
                     .padding(.bottom)
                     
-                    Button() {
-                        print("test")
-                    } label: {
+                    NavigationLink(destination: RegisterView()) {
                         Text("Register")
                             .font(.title2)
                             .bold()
                             .foregroundColor(.black)
-                    }
-                    .buttonStyle(WhiteButton())
-                    .padding(.bottom)
-                    
-                    NavigationLink(destination: RegisterView()) {
-                        Text("test")
+                            .frame(maxWidth: .infinity, maxHeight: 50)
+                            .background(RoundedRectangle(cornerRadius: 25.0).stroke(.black, lineWidth: 2.5))
+                            .padding([.leading, .trailing])
                     }
                 }
                 

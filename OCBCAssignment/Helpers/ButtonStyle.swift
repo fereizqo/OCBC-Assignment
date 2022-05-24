@@ -14,7 +14,6 @@ struct BlackButton: ButtonStyle {
             .frame(maxWidth: .infinity, maxHeight: 50)
             .background(RoundedRectangle(cornerRadius: 25.0).foregroundColor(.black))
             .padding([.leading, .trailing])
-//            .clipShape(Capsule())
     }
 }
 
@@ -25,6 +24,5 @@ struct WhiteButton: ButtonStyle {
             .frame(maxWidth: .infinity, maxHeight: 50)
             .background(RoundedRectangle(cornerRadius: 25.0).stroke(.black, lineWidth: 2.5))
             .padding([.leading, .trailing])
-//            .clipShape(Capsule())
     }
 }
