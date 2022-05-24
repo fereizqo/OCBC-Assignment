@@ -75,7 +75,7 @@ struct DashboardView: View {
                     ForEach(items, id: \.self) { item in
                         Section(content: {
                             ForEach(item.rows, id: \.self) { row in
-                                Text(row)
+                                DashboardRow(username: row)
                             }
                         }, header: {
                             Text(item.header)
@@ -84,6 +84,7 @@ struct DashboardView: View {
                 } // List - Transaction
                 // Ignore safe area to take up whole screen
                 .background(Color(uiColor: UIColor(named: "GrayBack") ?? .systemGray6))
+                .listStyle(.insetGrouped)
                 .onAppear {
                     // Set the default to clear
                     UITableView.appearance().backgroundColor = .clear
@@ -104,6 +105,7 @@ struct DashboardView: View {
             .navigationBarTitle("")
             .navigationBarHidden(true)
         }
+        .accentColor(.black)
     }
 }
 

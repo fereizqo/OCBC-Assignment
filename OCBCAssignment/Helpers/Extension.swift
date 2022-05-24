@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+extension UINavigationController {
+    open override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        navigationBar.topItem?.backButtonDisplayMode = .minimal
+    }
+}
+
 extension View {
     func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
         clipShape(RoundedCorner(radius: radius, corners: corners) )
