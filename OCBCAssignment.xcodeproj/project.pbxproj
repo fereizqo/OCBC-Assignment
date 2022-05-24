@@ -13,6 +13,9 @@
 		4970E5D6283D1823007A358C /* DashboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5D5283D1823007A358C /* DashboardRow.swift */; };
 		4970E5D7283D1823007A358C /* DashboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5D5283D1823007A358C /* DashboardRow.swift */; };
 		4970E5D8283D1823007A358C /* DashboardRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5D5283D1823007A358C /* DashboardRow.swift */; };
+		4970E5DC283D9FF8007A358C /* SquareSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */; };
+		4970E5DD283D9FF8007A358C /* SquareSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */; };
+		4970E5DE283D9FF8007A358C /* SquareSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */; };
 		49A8B5C0283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
 		49A8B5C1283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
 		49A8B5C2283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
@@ -78,6 +81,7 @@
 /* Begin PBXFileReference section */
 		4970E5D1283C9B78007A358C /* TransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferView.swift; sourceTree = "<group>"; };
 		4970E5D5283D1823007A358C /* DashboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRow.swift; sourceTree = "<group>"; };
+		4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSecureTextField.swift; sourceTree = "<group>"; };
 		49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTextField.swift; sourceTree = "<group>"; };
 		49A8B5C4283C417F0004C0A1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		49A8B5D2283C4A560004C0A1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -172,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */,
+				4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */,
 				49C35510283C501F00B7F62A /* ButtonStyle.swift */,
 				49BF2368283C8BD600AAE27C /* Extension.swift */,
 			);
@@ -393,6 +398,7 @@
 			files = (
 				49D67DB52839D91B00EBE443 /* ContentView.swift in Sources */,
 				4970E5D2283C9B78007A358C /* TransferView.swift in Sources */,
+				4970E5DC283D9FF8007A358C /* SquareSecureTextField.swift in Sources */,
 				49C35511283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				49A8B5C0283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
 				49BF2375283C8FC600AAE27C /* BalanceResponse.swift in Sources */,
@@ -421,6 +427,7 @@
 				4970E5D7283D1823007A358C /* DashboardRow.swift in Sources */,
 				49BF2372283C8EE200AAE27C /* LoginResponse.swift in Sources */,
 				49C35518283C699D00B7F62A /* DashboardView.swift in Sources */,
+				4970E5DD283D9FF8007A358C /* SquareSecureTextField.swift in Sources */,
 				49BF236A283C8BD600AAE27C /* Extension.swift in Sources */,
 				49BF2376283C8FC600AAE27C /* BalanceResponse.swift in Sources */,
 				49A8B5D4283C4A560004C0A1 /* RegisterView.swift in Sources */,
@@ -438,6 +445,7 @@
 			files = (
 				49D67DD02839D91E00EBE443 /* OCBCAssignmentUITestsLaunchTests.swift in Sources */,
 				4970E5D4283C9B78007A358C /* TransferView.swift in Sources */,
+				4970E5DE283D9FF8007A358C /* SquareSecureTextField.swift in Sources */,
 				49C35513283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				49A8B5C2283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
 				49BF2377283C8FC600AAE27C /* BalanceResponse.swift in Sources */,

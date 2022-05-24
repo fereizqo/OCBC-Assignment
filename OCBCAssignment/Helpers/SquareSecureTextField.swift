@@ -1,13 +1,13 @@
 //
-//  SquareTextField.swift
+//  SquareSecureTextField.swift
 //  OCBCAssignment
 //
-//  Created by Fereizqo Sulaiman on 24/05/22.
+//  Created by Fereizqo Sulaiman on 25/05/22.
 //
 
 import SwiftUI
 
-struct SquareTextField: View {
+struct SquareSecureTextField: View {
     @Binding var text: String
     @Binding var isAlert: Bool
     var dialogTitleText: String
@@ -19,10 +19,11 @@ struct SquareTextField: View {
                 Text(dialogTitleText)
                     .font(.headline)
                     .padding([.top, .leading, .trailing], 10.0)
-                TextField(dialogTitleText, text: $text)
+                SecureField(dialogTitleText, text: $text)
                     .disableAutocorrection(true)
                     .textInputAutocapitalization(.never)
                     .padding([.leading, .bottom, .trailing], 10.0)
+                    
             }
             .background(RoundedRectangle(cornerRadius: 4.0).stroke(.black, lineWidth: 2.5))
             
@@ -35,9 +36,9 @@ struct SquareTextField: View {
     }
 }
 
-struct SquareTextField_Previews: PreviewProvider {
+struct SquareSecureTextField_Previews: PreviewProvider {
     static var previews: some View {
-        SquareTextField(text: .constant("Test"), isAlert: .constant(true), dialogTitleText: "Username", alertText: "")
+        SquareSecureTextField(text: .constant("Test"), isAlert: .constant(true), dialogTitleText: "Username", alertText: "")
             .previewLayout(.fixed(width: 400, height: 130))
     }
 }

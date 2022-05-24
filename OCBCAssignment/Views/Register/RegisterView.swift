@@ -19,9 +19,9 @@ struct RegisterView: View {
         VStack {
             SquareTextField(text: $textUser, isAlert: $isAlertUser, dialogTitleText: "Username", alertText: "")
                 .padding(.top)
-            SquareTextField(text: $textPassword, isAlert: $isAlertPassword, dialogTitleText: "Password", alertText: "")
+            SquareSecureTextField(text: $textPassword, isAlert: $isAlertPassword, dialogTitleText: "Password", alertText: "")
                 .padding(.top)
-            SquareTextField(text: $textPasswordConfirm, isAlert: $isAlertPasswordConfirm, dialogTitleText: "Confirm Password", alertText: "")
+            SquareSecureTextField(text: $textPasswordConfirm, isAlert: $isAlertPasswordConfirm, dialogTitleText: "Confirm Password", alertText: "")
                 .padding(.top)
             
             Spacer()

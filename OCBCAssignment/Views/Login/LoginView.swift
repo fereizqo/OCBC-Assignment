@@ -18,7 +18,7 @@ struct LoginView: View {
             VStack {
                 VStack(spacing: 15) {
                     SquareTextField(text: $textUser, isAlert: $isAlertUser, dialogTitleText: "Username", alertText: "Username is required")
-                    SquareTextField(text: $textPassword, isAlert: $isAlertPassword, dialogTitleText: "Password", alertText: "Password is required")
+                    SquareSecureTextField(text: $textPassword, isAlert: $isAlertPassword, dialogTitleText: "Password", alertText: "Password is required")
                 } // VStack - Texfield
                 .padding(.top, 10)
                 
