@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TransferView: View {
     @State var dataPayee: [DropdownData]
+    @State var selectedPayee: DropdownData
     @State var textAmount: String
     @State var textDesc: String
     @State var isAlertPayee: Bool
@@ -25,7 +26,7 @@ struct TransferView: View {
         VStack {
             ZStack {
                 VStack(spacing: 20) {
-                    SquareDropdown(data: $dataPayee, isAlert: $isAlertPayee, dialogTitleText: "Payee", alertText: "")
+                    SquareDropdown(data: $dataPayee, isAlert: $isAlertPayee, selectedData: $selectedPayee, dialogTitleText: "Payee", alertText: "")
                         .padding(.top)
                         .zIndex(3)
                     SquareTextField(text: $textAmount, isAlert: $isAlertAmount, dialogTitleText: "Amount", alertText: "")
@@ -38,7 +39,7 @@ struct TransferView: View {
             Spacer()
             
             Button() {
-                print("test")
+                print("test \(selectedPayee)")
             } label: {
                 Text("Transfer Now")
                     .font(.title2)
@@ -54,6 +55,12 @@ struct TransferView: View {
 
 struct TransferView_Previews: PreviewProvider {
     static var previews: some View {
-        TransferView(dataPayee: [DropdownData(key: "1", value: "1")], textAmount: "", textDesc: "", isAlertPayee: false, isAlertAmount: false, isAlertDesc: false)
+        TransferView(dataPayee: [DropdownData(key: "1", value: "1")],
+                     selectedPayee: DropdownData(key: "1", value: "1"),
+                     textAmount: "",
+                     textDesc: "",
+                     isAlertPayee: false,
+                     isAlertAmount: false,
+                     isAlertDesc: false)
     }
 }
