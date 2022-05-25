@@ -91,7 +91,7 @@ struct DashboardView: View {
                     UITableView.appearance().separatorColor = .clear
                 }
                 
-                NavigationLink(destination: TransferView(textPayee: "", textAmount: "", textDesc: "", isAlertPayee: false, isAlertAmount: false, isAlertDesc: false)) {
+                NavigationLink(destination: TransferView(dataPayee: [DropdownData(key: "1", value: "1")], textAmount: "", textDesc: "", isAlertPayee: false, isAlertAmount: false, isAlertDesc: false)) {
                     Text("Make Transfer")
                         .font(.title2)
                         .bold()

@@ -16,6 +16,21 @@
 		4970E5DC283D9FF8007A358C /* SquareSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */; };
 		4970E5DD283D9FF8007A358C /* SquareSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */; };
 		4970E5DE283D9FF8007A358C /* SquareSecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */; };
+		4970E5E1283DA840007A358C /* DropdownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5E0283DA840007A358C /* DropdownSelector.swift */; };
+		4970E5E2283DA840007A358C /* DropdownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5E0283DA840007A358C /* DropdownSelector.swift */; };
+		4970E5E3283DA840007A358C /* DropdownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5E0283DA840007A358C /* DropdownSelector.swift */; };
+		4970E5E5283DA878007A358C /* DropdownData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5E4283DA878007A358C /* DropdownData.swift */; };
+		4970E5E6283DA878007A358C /* DropdownData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5E4283DA878007A358C /* DropdownData.swift */; };
+		4970E5E7283DA878007A358C /* DropdownData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5E4283DA878007A358C /* DropdownData.swift */; };
+		4970E5E9283DA96D007A358C /* DropdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5E8283DA96D007A358C /* DropdownRow.swift */; };
+		4970E5EA283DA96D007A358C /* DropdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5E8283DA96D007A358C /* DropdownRow.swift */; };
+		4970E5EB283DA96D007A358C /* DropdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5E8283DA96D007A358C /* DropdownRow.swift */; };
+		4970E5EE283DAAE7007A358C /* DropdownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5ED283DAAE7007A358C /* DropdownList.swift */; };
+		4970E5EF283DAAE7007A358C /* DropdownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5ED283DAAE7007A358C /* DropdownList.swift */; };
+		4970E5F0283DAAE7007A358C /* DropdownList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5ED283DAAE7007A358C /* DropdownList.swift */; };
+		4970E5F2283DBC48007A358C /* SquareDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5F1283DBC48007A358C /* SquareDropdown.swift */; };
+		4970E5F3283DBC48007A358C /* SquareDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5F1283DBC48007A358C /* SquareDropdown.swift */; };
+		4970E5F4283DBC48007A358C /* SquareDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5F1283DBC48007A358C /* SquareDropdown.swift */; };
 		49A8B5C0283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
 		49A8B5C1283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
 		49A8B5C2283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
@@ -82,6 +97,11 @@
 		4970E5D1283C9B78007A358C /* TransferView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferView.swift; sourceTree = "<group>"; };
 		4970E5D5283D1823007A358C /* DashboardRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardRow.swift; sourceTree = "<group>"; };
 		4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSecureTextField.swift; sourceTree = "<group>"; };
+		4970E5E0283DA840007A358C /* DropdownSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownSelector.swift; sourceTree = "<group>"; };
+		4970E5E4283DA878007A358C /* DropdownData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownData.swift; sourceTree = "<group>"; };
+		4970E5E8283DA96D007A358C /* DropdownRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownRow.swift; sourceTree = "<group>"; };
+		4970E5ED283DAAE7007A358C /* DropdownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownList.swift; sourceTree = "<group>"; };
+		4970E5F1283DBC48007A358C /* SquareDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareDropdown.swift; sourceTree = "<group>"; };
 		49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTextField.swift; sourceTree = "<group>"; };
 		49A8B5C4283C417F0004C0A1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		49A8B5D2283C4A560004C0A1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -139,10 +159,32 @@
 			path = Transfer;
 			sourceTree = "<group>";
 		};
+		4970E5DF283DA15D007A358C /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				4970E5EC283DAA98007A358C /* Dropdown */,
+				49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */,
+				4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */,
+				4970E5F1283DBC48007A358C /* SquareDropdown.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		4970E5EC283DAA98007A358C /* Dropdown */ = {
+			isa = PBXGroup;
+			children = (
+				4970E5E0283DA840007A358C /* DropdownSelector.swift */,
+				4970E5ED283DAAE7007A358C /* DropdownList.swift */,
+				4970E5E8283DA96D007A358C /* DropdownRow.swift */,
+			);
+			path = Dropdown;
+			sourceTree = "<group>";
+		};
 		49A8B5BB283C3B730004C0A1 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				49D67DB42839D91B00EBE443 /* ContentView.swift */,
+				4970E5DF283DA15D007A358C /* Component */,
 				49A8B5C3283C41510004C0A1 /* Login */,
 				49A8B5D1283C4A450004C0A1 /* Register */,
 				49C35514283C698600B7F62A /* Dashboard */,
@@ -160,6 +202,7 @@
 				49BF2380283C910500AAE27C /* TransferResponse.swift */,
 				49BF2374283C8FC600AAE27C /* BalanceResponse.swift */,
 				49BF236C283C8D9E00AAE27C /* TransactionResponse.swift */,
+				4970E5E4283DA878007A358C /* DropdownData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -175,8 +218,6 @@
 		49A8B5BE283C3C840004C0A1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */,
-				4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */,
 				49C35510283C501F00B7F62A /* ButtonStyle.swift */,
 				49BF2368283C8BD600AAE27C /* Extension.swift */,
 			);
@@ -401,18 +442,23 @@
 				4970E5DC283D9FF8007A358C /* SquareSecureTextField.swift in Sources */,
 				49C35511283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				49A8B5C0283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
+				4970E5E5283DA878007A358C /* DropdownData.swift in Sources */,
 				49BF2375283C8FC600AAE27C /* BalanceResponse.swift in Sources */,
 				49BF236D283C8D9E00AAE27C /* TransactionResponse.swift in Sources */,
 				49BF2381283C910600AAE27C /* TransferResponse.swift in Sources */,
 				49BF2371283C8EE200AAE27C /* LoginResponse.swift in Sources */,
+				4970E5EE283DAAE7007A358C /* DropdownList.swift in Sources */,
 				49BF237D283C90BB00AAE27C /* PayeeReponse.swift in Sources */,
 				49C35516283C699800B7F62A /* DashboardView.swift in Sources */,
 				49A8B5C5283C417F0004C0A1 /* LoginView.swift in Sources */,
+				4970E5E9283DA96D007A358C /* DropdownRow.swift in Sources */,
+				4970E5F2283DBC48007A358C /* SquareDropdown.swift in Sources */,
 				49A8B5D3283C4A560004C0A1 /* RegisterView.swift in Sources */,
 				49BF2379283C905700AAE27C /* RegisterResponse.swift in Sources */,
 				4970E5D6283D1823007A358C /* DashboardRow.swift in Sources */,
 				49D67DB32839D91B00EBE443 /* OCBCAssignmentApp.swift in Sources */,
 				49BF2369283C8BD600AAE27C /* Extension.swift in Sources */,
+				4970E5E1283DA840007A358C /* DropdownSelector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +468,8 @@
 			files = (
 				49A8B5C6283C417F0004C0A1 /* LoginView.swift in Sources */,
 				49BF237E283C90BB00AAE27C /* PayeeReponse.swift in Sources */,
+				4970E5F3283DBC48007A358C /* SquareDropdown.swift in Sources */,
+				4970E5EF283DAAE7007A358C /* DropdownList.swift in Sources */,
 				49BF237A283C905700AAE27C /* RegisterResponse.swift in Sources */,
 				49BF236E283C8D9E00AAE27C /* TransactionResponse.swift in Sources */,
 				4970E5D7283D1823007A358C /* DashboardRow.swift in Sources */,
@@ -430,11 +478,14 @@
 				4970E5DD283D9FF8007A358C /* SquareSecureTextField.swift in Sources */,
 				49BF236A283C8BD600AAE27C /* Extension.swift in Sources */,
 				49BF2376283C8FC600AAE27C /* BalanceResponse.swift in Sources */,
+				4970E5EA283DA96D007A358C /* DropdownRow.swift in Sources */,
+				4970E5E2283DA840007A358C /* DropdownSelector.swift in Sources */,
 				49A8B5D4283C4A560004C0A1 /* RegisterView.swift in Sources */,
 				49A8B5C1283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
 				49D67DC42839D91E00EBE443 /* OCBCAssignmentTests.swift in Sources */,
 				49BF2382283C910600AAE27C /* TransferResponse.swift in Sources */,
 				49C35512283C502000B7F62A /* ButtonStyle.swift in Sources */,
+				4970E5E6283DA878007A358C /* DropdownData.swift in Sources */,
 				4970E5D3283C9B78007A358C /* TransferView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,18 +499,23 @@
 				4970E5DE283D9FF8007A358C /* SquareSecureTextField.swift in Sources */,
 				49C35513283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				49A8B5C2283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
+				4970E5E7283DA878007A358C /* DropdownData.swift in Sources */,
 				49BF2377283C8FC600AAE27C /* BalanceResponse.swift in Sources */,
 				49BF236F283C8D9E00AAE27C /* TransactionResponse.swift in Sources */,
 				49BF2383283C910600AAE27C /* TransferResponse.swift in Sources */,
 				49BF2373283C8EE200AAE27C /* LoginResponse.swift in Sources */,
+				4970E5F0283DAAE7007A358C /* DropdownList.swift in Sources */,
 				49BF237F283C90BB00AAE27C /* PayeeReponse.swift in Sources */,
 				49C35517283C699D00B7F62A /* DashboardView.swift in Sources */,
 				49A8B5C7283C417F0004C0A1 /* LoginView.swift in Sources */,
+				4970E5EB283DA96D007A358C /* DropdownRow.swift in Sources */,
+				4970E5F4283DBC48007A358C /* SquareDropdown.swift in Sources */,
 				49A8B5D5283C4A560004C0A1 /* RegisterView.swift in Sources */,
 				49BF237B283C905700AAE27C /* RegisterResponse.swift in Sources */,
 				4970E5D8283D1823007A358C /* DashboardRow.swift in Sources */,
 				49D67DCE2839D91E00EBE443 /* OCBCAssignmentUITests.swift in Sources */,
 				49BF236B283C8BD600AAE27C /* Extension.swift in Sources */,
+				4970E5E3283DA840007A358C /* DropdownSelector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
