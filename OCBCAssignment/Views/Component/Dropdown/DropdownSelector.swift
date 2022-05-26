@@ -14,7 +14,7 @@ struct DropdownSelector: View {
     var placeholder: String
     var data: [DropdownData]
     var onDataSelected: ((_ data: DropdownData) -> Void)?
-    private let buttonHeight: CGFloat = 40
+    private let buttonHeight: CGFloat = 30
     
     var body: some View {
         Button(action: {

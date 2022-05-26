@@ -24,22 +24,23 @@ struct TransferView: View {
     
     var body: some View {
         VStack {
-            ZStack {
-                VStack(spacing: 20) {
-                    SquareDropdown(data: $dataPayee, isAlert: $isAlertPayee, selectedData: $selectedPayee, dialogTitleText: "Payee", alertText: "")
-                        .padding(.top)
-                        .zIndex(3)
-                    SquareTextField(text: $textAmount, isAlert: $isAlertAmount, dialogTitleText: "Amount", alertText: "")
-                        .zIndex(2)
-                    SquareTextField(text: $textDesc, isAlert: $isAlertDesc, dialogTitleText: "Description", alertText: "")
-                        .zIndex(1)
+            ScrollView {
+                ZStack {
+                    VStack(spacing: 20) {
+                        SquareDropdown(data: $dataPayee, isAlert: $isAlertPayee, selectedData: $selectedPayee, dialogTitleText: "Payee", alertText: "")
+                            .zIndex(3)
+                            .padding(.top)
+                        SquareTextField(text: $textAmount, isAlert: $isAlertAmount, dialogTitleText: "Amount", alertText: "", keyboardType: .numberPad)
+                            .zIndex(2)
+                        SquareTextEditor(text: $textDesc, isAlert: $isAlertDesc, dialogTitleText: "Description", alertText: "")
+                            .zIndex(1)
+                            .padding(.bottom)
+                    }
                 }
             }
             
-            Spacer()
-            
             Button() {
-                print("test \(selectedPayee)")
+                print("test \(selectedPayee) \(textDesc)")
             } label: {
                 Text("Transfer Now")
                     .font(.title2)
@@ -47,6 +48,7 @@ struct TransferView: View {
                     .foregroundColor(.white)
             }
             .buttonStyle(BlackButton())
+            
         }
         .navigationTitle("Transfer")
         .navigationBarTitleDisplayMode(.large)

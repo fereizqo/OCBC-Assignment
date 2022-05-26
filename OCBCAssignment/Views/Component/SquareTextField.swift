@@ -12,6 +12,7 @@ struct SquareTextField: View {
     @Binding var isAlert: Bool
     var dialogTitleText: String
     var alertText: String
+    var keyboardType: UIKeyboardType = .default
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -23,6 +24,7 @@ struct SquareTextField: View {
                     .disableAutocorrection(true)
                     .textInputAutocapitalization(.never)
                     .padding([.leading, .bottom, .trailing], 10.0)
+                    .keyboardType(keyboardType)
             }
             .background(RoundedRectangle(cornerRadius: 4.0).stroke(.black, lineWidth: 2.5))
             
@@ -37,7 +39,9 @@ struct SquareTextField: View {
 
 struct SquareTextField_Previews: PreviewProvider {
     static var previews: some View {
-        SquareTextField(text: .constant("Test"), isAlert: .constant(true), dialogTitleText: "Username", alertText: "")
+        SquareTextField(text: .constant("Test"),
+                        isAlert: .constant(true),
+                        dialogTitleText: "Username", alertText: "")
             .previewLayout(.fixed(width: 400, height: 130))
     }
 }

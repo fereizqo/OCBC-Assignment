@@ -31,6 +31,9 @@
 		4970E5F2283DBC48007A358C /* SquareDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5F1283DBC48007A358C /* SquareDropdown.swift */; };
 		4970E5F3283DBC48007A358C /* SquareDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5F1283DBC48007A358C /* SquareDropdown.swift */; };
 		4970E5F4283DBC48007A358C /* SquareDropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5F1283DBC48007A358C /* SquareDropdown.swift */; };
+		4970E5FA283E009B007A358C /* SquareTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5F9283E009B007A358C /* SquareTextEditor.swift */; };
+		4970E5FB283E009B007A358C /* SquareTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5F9283E009B007A358C /* SquareTextEditor.swift */; };
+		4970E5FC283E009B007A358C /* SquareTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4970E5F9283E009B007A358C /* SquareTextEditor.swift */; };
 		49A8B5C0283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
 		49A8B5C1283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
 		49A8B5C2283C3CCC0004C0A1 /* SquareTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */; };
@@ -102,6 +105,7 @@
 		4970E5E8283DA96D007A358C /* DropdownRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownRow.swift; sourceTree = "<group>"; };
 		4970E5ED283DAAE7007A358C /* DropdownList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownList.swift; sourceTree = "<group>"; };
 		4970E5F1283DBC48007A358C /* SquareDropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareDropdown.swift; sourceTree = "<group>"; };
+		4970E5F9283E009B007A358C /* SquareTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTextEditor.swift; sourceTree = "<group>"; };
 		49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTextField.swift; sourceTree = "<group>"; };
 		49A8B5C4283C417F0004C0A1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		49A8B5D2283C4A560004C0A1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
@@ -164,6 +168,7 @@
 			children = (
 				4970E5EC283DAA98007A358C /* Dropdown */,
 				49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */,
+				4970E5F9283E009B007A358C /* SquareTextEditor.swift */,
 				4970E5DB283D9FF8007A358C /* SquareSecureTextField.swift */,
 				4970E5F1283DBC48007A358C /* SquareDropdown.swift */,
 			);
@@ -452,6 +457,7 @@
 				49C35516283C699800B7F62A /* DashboardView.swift in Sources */,
 				49A8B5C5283C417F0004C0A1 /* LoginView.swift in Sources */,
 				4970E5E9283DA96D007A358C /* DropdownRow.swift in Sources */,
+				4970E5FA283E009B007A358C /* SquareTextEditor.swift in Sources */,
 				4970E5F2283DBC48007A358C /* SquareDropdown.swift in Sources */,
 				49A8B5D3283C4A560004C0A1 /* RegisterView.swift in Sources */,
 				49BF2379283C905700AAE27C /* RegisterResponse.swift in Sources */,
@@ -480,6 +486,7 @@
 				49BF2376283C8FC600AAE27C /* BalanceResponse.swift in Sources */,
 				4970E5EA283DA96D007A358C /* DropdownRow.swift in Sources */,
 				4970E5E2283DA840007A358C /* DropdownSelector.swift in Sources */,
+				4970E5FB283E009B007A358C /* SquareTextEditor.swift in Sources */,
 				49A8B5D4283C4A560004C0A1 /* RegisterView.swift in Sources */,
 				49A8B5C1283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
 				49D67DC42839D91E00EBE443 /* OCBCAssignmentTests.swift in Sources */,
@@ -509,6 +516,7 @@
 				49C35517283C699D00B7F62A /* DashboardView.swift in Sources */,
 				49A8B5C7283C417F0004C0A1 /* LoginView.swift in Sources */,
 				4970E5EB283DA96D007A358C /* DropdownRow.swift in Sources */,
+				4970E5FC283E009B007A358C /* SquareTextEditor.swift in Sources */,
 				4970E5F4283DBC48007A358C /* SquareDropdown.swift in Sources */,
 				49A8B5D5283C4A560004C0A1 /* RegisterView.swift in Sources */,
 				49BF237B283C905700AAE27C /* RegisterResponse.swift in Sources */,
