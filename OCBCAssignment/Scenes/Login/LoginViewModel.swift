@@ -17,6 +17,7 @@ class LoginViewModel: ObservableObject {
     
     init(apiManager: APIManagerProtocol = APIManager.shared) {
         self.apiManager = apiManager
+        checkSession()
     }
     
     func doLogin(username: String, password: String) {
@@ -33,6 +34,12 @@ class LoginViewModel: ObservableObject {
                     UserDefaults.standard.set(data.accountNo, forKey: "user_account_number")
                 }
             }.store(in: &cancellableSet)
+    }
+    
+    func checkSession() {
+        if let _ = UserDefaults.standard.string(forKey: "user_token") {
+            isLoginSuccess = true
+        }
     }
     
 }
