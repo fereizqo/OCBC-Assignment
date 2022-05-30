@@ -26,8 +26,17 @@ struct Endpoint {
     }
     
     var headers: [String: String] {
-        return ["Content-Type": "application/json",
-                "Accept": "application/json"]
+        var header = ["":""]
+        
+        if let token = UserDefaults.standard.string(forKey: "user_token") {
+            header = ["Content-Type": "application/json",
+                      "Accept": "application/json",
+                      "Authorization": token]
+        } else {
+            header = ["Content-Type": "application/json",
+                      "Accept": "application/json"]
+        }
+        return header
     }
     
     static func login() -> Self {

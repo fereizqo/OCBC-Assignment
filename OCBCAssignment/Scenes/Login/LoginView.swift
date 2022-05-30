@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct LoginView: View {
+    
     @State var textUser: String
     @State var textPassword: String
     @State var isAlertUser: Bool
@@ -40,6 +41,7 @@ struct LoginView: View {
                     }
                     .buttonStyle(BlackButton())
                     .padding(.bottom)
+                    .fullScreenCover(isPresented: $viewModel.isLoginSuccess, content: DashboardView.init)
                     
                     NavigationLink(destination: RegisterView(textUser: "", textPassword: "", textPasswordConfirm: "", isAlertUser: false, isAlertPassword: false, isAlertPasswordConfirm: false)) {
                         Text("Register")

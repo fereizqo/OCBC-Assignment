@@ -17,14 +17,19 @@ struct TransactionResponse: Codable {
 struct TransactionData: Codable {
     let transactionID: String
     let amount: Double
-    let transactionDate: String
+    let transactionTime: String
     let datumDescription: String?
     let transactionType: String
     let receipient: Receipient
+    
+    var transactionDate: Date? {
+        return transactionTime.toDate(dateFormat: "yyyy-MM-dd'T'HH:mm:ss.sssZ", setLocalTimeZone: false)
+    }
 
     enum CodingKeys: String, CodingKey {
         case transactionID = "transactionId"
-        case amount, transactionDate
+        case amount
+        case transactionTime = "transactionDate"
         case datumDescription = "description"
         case transactionType, receipient
     }
@@ -42,3 +47,8 @@ struct ErrorResponse: Codable {
     let message: String?
 }
 
+extension TransactionData: Dated {
+    var date: Date {
+        return transactionDate ?? Date()
+    }
+}

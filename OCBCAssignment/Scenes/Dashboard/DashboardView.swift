@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct DashboardView: View {
+    
+    @Environment(\.presentationMode) var presentationMode
+    @ObservedObject var viewModel = DashboardViewModel()
+    
     let items = [
         Item(header: "Header 1", footer: "Footer 1", rows: ["A", "B", "C"]),
         Item(header: "Header 2", footer: "Footer 2", rows: ["C", "D"]),
@@ -20,7 +24,8 @@ struct DashboardView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        print("Logout")
+                        viewModel.logOut()
+                        presentationMode.wrappedValue.dismiss()
                     }, label: {
                         Text("Logout")
                             .foregroundColor(.black)
@@ -72,15 +77,28 @@ struct DashboardView: View {
                 Spacer()
                 
                 List {
-                    ForEach(items, id: \.self) { item in
+                    let keys = viewModel.transactionDictionary.map{$0.key}
+                    let values = viewModel.transactionDictionary.map {$0.value}
+                    ForEach(keys.indices) { index in
                         Section(content: {
-                            ForEach(item.rows, id: \.self) { row in
-                                DashboardRow(username: row)
+                            ForEach(values[index], id: \.transactionID) { data in
+                                DashboardRow(username: data.receipient.accountHolder)
                             }
                         }, header: {
-                            Text(item.header)
+                            Text(keys[index].toString("dd MM YYYY", setLocalTimeZone: false))
                         })
                     }
+                    
+//                    ForEach(items, id: \.self) { item in
+//                        Section(content: {
+//                            ForEach(item.rows, id: \.self) { row in
+//                                DashboardRow(username: row)
+//                            }
+//                        }, header: {
+//                            Text(item.header)
+//                        })
+//                    }
+                    
                 } // List - Transaction
                 // Ignore safe area to take up whole screen
                 .background(Color(uiColor: UIColor(named: "GrayBack") ?? .systemGray6))
