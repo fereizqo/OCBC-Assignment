@@ -11,7 +11,7 @@ struct SquareTextField: View {
     @Binding var text: String
     @Binding var isAlert: Bool
     var dialogTitleText: String
-    var alertText: String
+    var alertText: String = ""
     var keyboardType: UIKeyboardType = .default
     
     var body: some View {

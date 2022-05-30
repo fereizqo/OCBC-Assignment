@@ -26,17 +26,9 @@ struct LoginView: View {
                 
                 VStack(spacing: 0.0) {
                     Button() {
-                        if textUser.count == 0 {
-                            isAlertUser = true
-                        } else {
-                            isAlertUser = false
-                        }
-                        if textPassword.count == 0 {
-                            isAlertPassword = true
-                        } else {
-                            isAlertPassword = false
-                        }
-                        if textUser.count > 0 && textPassword.count > 0 {
+                        isAlertUser = textUser.count == 0
+                        isAlertPassword = textPassword.count == 0
+                        if !isAlertUser && !isAlertPassword {
                             print("ACTION: LOGIN")
                         }
                     } label: {

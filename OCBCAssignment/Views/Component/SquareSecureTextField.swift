@@ -11,7 +11,7 @@ struct SquareSecureTextField: View {
     @Binding var text: String
     @Binding var isAlert: Bool
     var dialogTitleText: String
-    var alertText: String
+    var alertText: String = ""
     
     var body: some View {
         VStack(alignment: .leading) {

@@ -12,8 +12,8 @@ struct OCBCAssignmentApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            LoginView(textUser: "", textPassword: "", isAlertUser: false, isAlertPassword: false)
-            DashboardView()
+            LoginView(textUser: "", textPassword: "", isAlertUser: false, isAlertPassword: false)
+//            DashboardView()
         }
     }
 }

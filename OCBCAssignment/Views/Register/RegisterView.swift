@@ -17,17 +17,22 @@ struct RegisterView: View {
     
     var body: some View {
         VStack {
-            SquareTextField(text: $textUser, isAlert: $isAlertUser, dialogTitleText: "Username", alertText: "")
+            SquareTextField(text: $textUser, isAlert: $isAlertUser, dialogTitleText: "Username", alertText: "Username is required")
                 .padding(.top)
-            SquareSecureTextField(text: $textPassword, isAlert: $isAlertPassword, dialogTitleText: "Password", alertText: "")
+            SquareSecureTextField(text: $textPassword, isAlert: $isAlertPassword, dialogTitleText: "Password", alertText: "Password is required")
                 .padding(.top)
-            SquareSecureTextField(text: $textPasswordConfirm, isAlert: $isAlertPasswordConfirm, dialogTitleText: "Confirm Password", alertText: "")
+            SquareSecureTextField(text: $textPasswordConfirm, isAlert: $isAlertPasswordConfirm, dialogTitleText: "Confirm Password", alertText: "Confirm password not match")
                 .padding(.top)
             
             Spacer()
             
             Button() {
-                print("test")
+                isAlertUser = textUser.count == 0
+                isAlertPassword = textPassword.count == 0
+                isAlertPasswordConfirm = textPassword != textPasswordConfirm
+                if !isAlertUser && !isAlertPassword && !isAlertPasswordConfirm {
+                    print("ACTION: register")
+                }
             } label: {
                 Text("Register")
                     .font(.title2)
