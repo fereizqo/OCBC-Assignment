@@ -46,6 +46,15 @@
 		49A8B5D3283C4A560004C0A1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5D2283C4A560004C0A1 /* RegisterView.swift */; };
 		49A8B5D4283C4A560004C0A1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5D2283C4A560004C0A1 /* RegisterView.swift */; };
 		49A8B5D5283C4A560004C0A1 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A8B5D2283C4A560004C0A1 /* RegisterView.swift */; };
+		49ABAE53284495F100C84322 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE52284495F100C84322 /* ErrorResponse.swift */; };
+		49ABAE54284495F100C84322 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE52284495F100C84322 /* ErrorResponse.swift */; };
+		49ABAE55284495F100C84322 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE52284495F100C84322 /* ErrorResponse.swift */; };
+		49ABAE582844979100C84322 /* ServiceNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE572844979100C84322 /* ServiceNetwork.swift */; };
+		49ABAE592844979100C84322 /* ServiceNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE572844979100C84322 /* ServiceNetwork.swift */; };
+		49ABAE5A2844979100C84322 /* ServiceNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE572844979100C84322 /* ServiceNetwork.swift */; };
+		49ABAE5E28449A4F00C84322 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE5D28449A4F00C84322 /* Endpoint.swift */; };
+		49ABAE5F28449A4F00C84322 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE5D28449A4F00C84322 /* Endpoint.swift */; };
+		49ABAE6028449A4F00C84322 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE5D28449A4F00C84322 /* Endpoint.swift */; };
 		49BF2369283C8BD600AAE27C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF2368283C8BD600AAE27C /* Extension.swift */; };
 		49BF236A283C8BD600AAE27C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF2368283C8BD600AAE27C /* Extension.swift */; };
 		49BF236B283C8BD600AAE27C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF2368283C8BD600AAE27C /* Extension.swift */; };
@@ -116,6 +125,9 @@
 		49A8B5BF283C3CCC0004C0A1 /* SquareTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareTextField.swift; sourceTree = "<group>"; };
 		49A8B5C4283C417F0004C0A1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		49A8B5D2283C4A560004C0A1 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		49ABAE52284495F100C84322 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
+		49ABAE572844979100C84322 /* ServiceNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceNetwork.swift; sourceTree = "<group>"; };
+		49ABAE5D28449A4F00C84322 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		49BF2368283C8BD600AAE27C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		49BF236C283C8D9E00AAE27C /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		49BF2370283C8EE200AAE27C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -223,6 +235,7 @@
 				49BF2374283C8FC600AAE27C /* BalanceResponse.swift */,
 				49BF236C283C8D9E00AAE27C /* TransactionResponse.swift */,
 				4970E5E4283DA878007A358C /* DropdownData.swift */,
+				49ABAE52284495F100C84322 /* ErrorResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -238,6 +251,7 @@
 		49A8B5BE283C3C840004C0A1 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				49ABAE562844978800C84322 /* Network */,
 				49C35510283C501F00B7F62A /* ButtonStyle.swift */,
 				49BF2368283C8BD600AAE27C /* Extension.swift */,
 			);
@@ -258,6 +272,15 @@
 				49A8B5D2283C4A560004C0A1 /* RegisterView.swift */,
 			);
 			path = Register;
+			sourceTree = "<group>";
+		};
+		49ABAE562844978800C84322 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				49ABAE572844979100C84322 /* ServiceNetwork.swift */,
+				49ABAE5D28449A4F00C84322 /* Endpoint.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		49C35514283C698600B7F62A /* Dashboard */ = {
@@ -349,7 +372,6 @@
 				FB6EEED31C38E7321CACD068 /* Pods-OCBCAssignmentTests.debug.xcconfig */,
 				993DC63360ACF21A02E5C949 /* Pods-OCBCAssignmentTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -593,6 +615,7 @@
 			files = (
 				49D67DB52839D91B00EBE443 /* ContentView.swift in Sources */,
 				4970E5D2283C9B78007A358C /* TransferView.swift in Sources */,
+				49ABAE582844979100C84322 /* ServiceNetwork.swift in Sources */,
 				4970E5DC283D9FF8007A358C /* SquareSecureTextField.swift in Sources */,
 				49C35511283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				49A8B5C0283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
@@ -606,6 +629,8 @@
 				49C35516283C699800B7F62A /* DashboardView.swift in Sources */,
 				49A8B5C5283C417F0004C0A1 /* LoginView.swift in Sources */,
 				4970E5E9283DA96D007A358C /* DropdownRow.swift in Sources */,
+				49ABAE5E28449A4F00C84322 /* Endpoint.swift in Sources */,
+				49ABAE53284495F100C84322 /* ErrorResponse.swift in Sources */,
 				4970E5FA283E009B007A358C /* SquareTextEditor.swift in Sources */,
 				4970E5F2283DBC48007A358C /* SquareDropdown.swift in Sources */,
 				49A8B5D3283C4A560004C0A1 /* RegisterView.swift in Sources */,
@@ -638,11 +663,14 @@
 				4970E5FB283E009B007A358C /* SquareTextEditor.swift in Sources */,
 				49A8B5D4283C4A560004C0A1 /* RegisterView.swift in Sources */,
 				49A8B5C1283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
+				49ABAE592844979100C84322 /* ServiceNetwork.swift in Sources */,
+				49ABAE54284495F100C84322 /* ErrorResponse.swift in Sources */,
 				49D67DC42839D91E00EBE443 /* OCBCAssignmentTests.swift in Sources */,
 				49BF2382283C910600AAE27C /* TransferResponse.swift in Sources */,
 				49C35512283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				4970E5E6283DA878007A358C /* DropdownData.swift in Sources */,
 				4970E5D3283C9B78007A358C /* TransferView.swift in Sources */,
+				49ABAE5F28449A4F00C84322 /* Endpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +680,7 @@
 			files = (
 				49D67DD02839D91E00EBE443 /* OCBCAssignmentUITestsLaunchTests.swift in Sources */,
 				4970E5D4283C9B78007A358C /* TransferView.swift in Sources */,
+				49ABAE5A2844979100C84322 /* ServiceNetwork.swift in Sources */,
 				4970E5DE283D9FF8007A358C /* SquareSecureTextField.swift in Sources */,
 				49C35513283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				49A8B5C2283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
@@ -665,6 +694,8 @@
 				49C35517283C699D00B7F62A /* DashboardView.swift in Sources */,
 				49A8B5C7283C417F0004C0A1 /* LoginView.swift in Sources */,
 				4970E5EB283DA96D007A358C /* DropdownRow.swift in Sources */,
+				49ABAE6028449A4F00C84322 /* Endpoint.swift in Sources */,
+				49ABAE55284495F100C84322 /* ErrorResponse.swift in Sources */,
 				4970E5FC283E009B007A358C /* SquareTextEditor.swift in Sources */,
 				4970E5F4283DBC48007A358C /* SquareDropdown.swift in Sources */,
 				49A8B5D5283C4A560004C0A1 /* RegisterView.swift in Sources */,

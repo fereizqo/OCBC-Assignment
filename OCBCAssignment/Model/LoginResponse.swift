@@ -14,3 +14,8 @@ struct LoginResponse: Codable {
     let accountNo: String?
     let error: String?
 }
+
+struct LoginRequest: Codable {
+    let username: String
+    let password: String
+}
