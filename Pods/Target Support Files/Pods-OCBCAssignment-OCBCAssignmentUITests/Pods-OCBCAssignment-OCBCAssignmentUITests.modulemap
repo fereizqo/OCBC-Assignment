@@ -1,0 +1,6 @@
+framework module Pods_OCBCAssignment_OCBCAssignmentUITests {
+  umbrella header "Pods-OCBCAssignment-OCBCAssignmentUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
