@@ -28,12 +28,9 @@ extension NetworkService: NetworkServiceProtocol {
         switch method {
         case .get:
             encoding = URLEncoding(destination: .queryString, arrayEncoding: .noBrackets, boolEncoding: .literal)
-            // URLEncoding(destination: .httpBody, arrayEncoding: .noBrackets, boolEncoding: .literal)
         default:
             encoding = JSONEncoding.default
         }
-        
-        print("response url: \(endPoint.url)")
         
         return AF.request(endPoint.url, method: method, parameters: parameters, encoding: encoding, headers: headers)
             .validate()

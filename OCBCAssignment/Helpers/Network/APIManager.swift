@@ -17,7 +17,7 @@ protocol APIManagerProtocol {
     func doTransfer(transferRequest: TransferRequest) -> AnyPublisher<DataResponse<TransferResponse, NetworkError>, Never>
 }
 
-class APIManager: APIManagerProtocol {
+final class APIManager: APIManagerProtocol {
     static let shared = APIManager()
     
     func doLogin(loginRequest: LoginRequest) -> AnyPublisher<DataResponse<LoginResponse, NetworkError>, Never> {

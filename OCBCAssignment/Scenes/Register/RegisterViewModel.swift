@@ -1,5 +1,5 @@
 //
-//  LoginViewModel.swift
+//  RegisterViewModel.swift
 //  OCBCAssignment
 //
 //  Created by Fereizqo Sulaiman on 30/05/22.
@@ -7,9 +7,9 @@
 
 import Combine
 
-class LoginViewModel: ObservableObject {
+class RegisterViewModel: ObservableObject {
     
-    @Published var loginResponse: LoginResponse?
+    @Published var registerResponse: RegisterReponse?
     private var cancellableSet: Set<AnyCancellable> = []
     var apiManager: APIManagerProtocol
     
@@ -17,13 +17,13 @@ class LoginViewModel: ObservableObject {
         self.apiManager = apiManager
     }
     
-    func doLogin(username: String, password: String) {
-        apiManager.doLogin(loginRequest: LoginRequest(username: username, password: password))
+    func doRegister(username: String, password: String) {
+        apiManager.doRegister(registRequest: RegisterRequest(username: username, password: password))
             .sink { (response) in
                 if let error = response.error {
                     print("ERROR: \(error)")
                 } else if let data = response.value {
-                    self.loginResponse = data
+                    self.registerResponse = data
                 }
             }.store(in: &cancellableSet)
     }

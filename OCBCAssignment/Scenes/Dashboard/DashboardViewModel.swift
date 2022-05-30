@@ -1,5 +1,5 @@
 //
-//  LoginViewModel.swift
+//  DashboardViewModel.swift
 //  OCBCAssignment
 //
 //  Created by Fereizqo Sulaiman on 30/05/22.
@@ -7,9 +7,9 @@
 
 import Combine
 
-class LoginViewModel: ObservableObject {
+class DashboardViewModel: ObservableObject {
     
-    @Published var loginResponse: LoginResponse?
+    @Published var transactionResponse: TransactionResponse?
     private var cancellableSet: Set<AnyCancellable> = []
     var apiManager: APIManagerProtocol
     
@@ -17,13 +17,13 @@ class LoginViewModel: ObservableObject {
         self.apiManager = apiManager
     }
     
-    func doLogin(username: String, password: String) {
-        apiManager.doLogin(loginRequest: LoginRequest(username: username, password: password))
+    func getTransactions() {
+        apiManager.getTransactions()
             .sink { (response) in
                 if let error = response.error {
                     print("ERROR: \(error)")
                 } else if let data = response.value {
-                    self.loginResponse = data
+                    self.transactionResponse = data
                 }
             }.store(in: &cancellableSet)
     }

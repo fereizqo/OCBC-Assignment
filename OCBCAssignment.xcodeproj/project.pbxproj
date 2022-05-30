@@ -61,6 +61,15 @@
 		49ABAE6E2844AFE200C84322 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE6D2844AFE200C84322 /* LoginViewModel.swift */; };
 		49ABAE6F2844AFE200C84322 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE6D2844AFE200C84322 /* LoginViewModel.swift */; };
 		49ABAE702844AFE200C84322 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE6D2844AFE200C84322 /* LoginViewModel.swift */; };
+		49ABAE742844B69B00C84322 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE732844B69B00C84322 /* RegisterViewModel.swift */; };
+		49ABAE752844B69B00C84322 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE732844B69B00C84322 /* RegisterViewModel.swift */; };
+		49ABAE762844B69B00C84322 /* RegisterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE732844B69B00C84322 /* RegisterViewModel.swift */; };
+		49ABAE782844B70F00C84322 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE772844B70F00C84322 /* DashboardViewModel.swift */; };
+		49ABAE792844B70F00C84322 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE772844B70F00C84322 /* DashboardViewModel.swift */; };
+		49ABAE7A2844B70F00C84322 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE772844B70F00C84322 /* DashboardViewModel.swift */; };
+		49ABAE7C2844B73800C84322 /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE7B2844B73800C84322 /* TransferViewModel.swift */; };
+		49ABAE7D2844B73800C84322 /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE7B2844B73800C84322 /* TransferViewModel.swift */; };
+		49ABAE7E2844B73800C84322 /* TransferViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE7B2844B73800C84322 /* TransferViewModel.swift */; };
 		49BF2369283C8BD600AAE27C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF2368283C8BD600AAE27C /* Extension.swift */; };
 		49BF236A283C8BD600AAE27C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF2368283C8BD600AAE27C /* Extension.swift */; };
 		49BF236B283C8BD600AAE27C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF2368283C8BD600AAE27C /* Extension.swift */; };
@@ -136,6 +145,9 @@
 		49ABAE5D28449A4F00C84322 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		49ABAE692844AF6500C84322 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		49ABAE6D2844AFE200C84322 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		49ABAE732844B69B00C84322 /* RegisterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewModel.swift; sourceTree = "<group>"; };
+		49ABAE772844B70F00C84322 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		49ABAE7B2844B73800C84322 /* TransferViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferViewModel.swift; sourceTree = "<group>"; };
 		49BF2368283C8BD600AAE27C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		49BF236C283C8D9E00AAE27C /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		49BF2370283C8EE200AAE27C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -194,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				4970E5D1283C9B78007A358C /* TransferView.swift */,
+				49ABAE7B2844B73800C84322 /* TransferViewModel.swift */,
 			);
 			path = Transfer;
 			sourceTree = "<group>";
@@ -279,6 +292,7 @@
 			isa = PBXGroup;
 			children = (
 				49A8B5D2283C4A560004C0A1 /* RegisterView.swift */,
+				49ABAE732844B69B00C84322 /* RegisterViewModel.swift */,
 			);
 			path = Register;
 			sourceTree = "<group>";
@@ -296,8 +310,9 @@
 		49C35514283C698600B7F62A /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
-				49C35515283C699800B7F62A /* DashboardView.swift */,
 				4970E5D5283D1823007A358C /* DashboardRow.swift */,
+				49C35515283C699800B7F62A /* DashboardView.swift */,
+				49ABAE772844B70F00C84322 /* DashboardViewModel.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -644,11 +659,14 @@
 				49ABAE53284495F100C84322 /* ErrorResponse.swift in Sources */,
 				4970E5FA283E009B007A358C /* SquareTextEditor.swift in Sources */,
 				49ABAE6E2844AFE200C84322 /* LoginViewModel.swift in Sources */,
+				49ABAE782844B70F00C84322 /* DashboardViewModel.swift in Sources */,
 				4970E5F2283DBC48007A358C /* SquareDropdown.swift in Sources */,
 				49A8B5D3283C4A560004C0A1 /* RegisterView.swift in Sources */,
 				49BF2379283C905700AAE27C /* RegisterResponse.swift in Sources */,
 				4970E5D6283D1823007A358C /* DashboardRow.swift in Sources */,
 				49D67DB32839D91B00EBE443 /* OCBCAssignmentApp.swift in Sources */,
+				49ABAE7C2844B73800C84322 /* TransferViewModel.swift in Sources */,
+				49ABAE742844B69B00C84322 /* RegisterViewModel.swift in Sources */,
 				49BF2369283C8BD600AAE27C /* Extension.swift in Sources */,
 				4970E5E1283DA840007A358C /* DropdownSelector.swift in Sources */,
 			);
@@ -659,6 +677,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49A8B5C6283C417F0004C0A1 /* LoginView.swift in Sources */,
+				49ABAE792844B70F00C84322 /* DashboardViewModel.swift in Sources */,
 				49BF237E283C90BB00AAE27C /* PayeeReponse.swift in Sources */,
 				4970E5F3283DBC48007A358C /* SquareDropdown.swift in Sources */,
 				4970E5EF283DAAE7007A358C /* DropdownList.swift in Sources */,
@@ -676,11 +695,13 @@
 				4970E5E2283DA840007A358C /* DropdownSelector.swift in Sources */,
 				4970E5FB283E009B007A358C /* SquareTextEditor.swift in Sources */,
 				49A8B5D4283C4A560004C0A1 /* RegisterView.swift in Sources */,
+				49ABAE7D2844B73800C84322 /* TransferViewModel.swift in Sources */,
 				49A8B5C1283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
 				49ABAE592844979100C84322 /* ServiceNetwork.swift in Sources */,
 				49ABAE54284495F100C84322 /* ErrorResponse.swift in Sources */,
 				49D67DC42839D91E00EBE443 /* OCBCAssignmentTests.swift in Sources */,
 				49BF2382283C910600AAE27C /* TransferResponse.swift in Sources */,
+				49ABAE752844B69B00C84322 /* RegisterViewModel.swift in Sources */,
 				49C35512283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				4970E5E6283DA878007A358C /* DropdownData.swift in Sources */,
 				4970E5D3283C9B78007A358C /* TransferView.swift in Sources */,
@@ -713,11 +734,14 @@
 				49ABAE55284495F100C84322 /* ErrorResponse.swift in Sources */,
 				4970E5FC283E009B007A358C /* SquareTextEditor.swift in Sources */,
 				49ABAE702844AFE200C84322 /* LoginViewModel.swift in Sources */,
+				49ABAE7A2844B70F00C84322 /* DashboardViewModel.swift in Sources */,
 				4970E5F4283DBC48007A358C /* SquareDropdown.swift in Sources */,
 				49A8B5D5283C4A560004C0A1 /* RegisterView.swift in Sources */,
 				49BF237B283C905700AAE27C /* RegisterResponse.swift in Sources */,
 				4970E5D8283D1823007A358C /* DashboardRow.swift in Sources */,
 				49D67DCE2839D91E00EBE443 /* OCBCAssignmentUITests.swift in Sources */,
+				49ABAE7E2844B73800C84322 /* TransferViewModel.swift in Sources */,
+				49ABAE762844B69B00C84322 /* RegisterViewModel.swift in Sources */,
 				49BF236B283C8BD600AAE27C /* Extension.swift in Sources */,
 				4970E5E3283DA840007A358C /* DropdownSelector.swift in Sources */,
 			);
