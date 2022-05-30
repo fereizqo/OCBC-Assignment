@@ -12,6 +12,7 @@ struct LoginView: View {
     @State var textPassword: String
     @State var isAlertUser: Bool
     @State var isAlertPassword: Bool
+    @ObservedObject var viewModel = LoginViewModel()
     
     var body: some View {
         NavigationView {
@@ -29,7 +30,7 @@ struct LoginView: View {
                         isAlertUser = textUser.count == 0
                         isAlertPassword = textPassword.count == 0
                         if !isAlertUser && !isAlertPassword {
-                            print("ACTION: LOGIN")
+                            viewModel.doLogin(username: textUser, password: textPassword)
                         }
                     } label: {
                         Text("Login")

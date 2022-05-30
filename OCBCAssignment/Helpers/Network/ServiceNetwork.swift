@@ -9,7 +9,7 @@ import Combine
 import Alamofire
 
 protocol NetworkServiceProtocol {
-    func sendRequest<T,Y>(type: T.Type, method: HTTPMethod, endPoint: Endpoint, parameters: Y?) -> AnyPublisher<DataResponse<T, NetworkError>, Never> where T: Codable, Y: Codable
+    func sendRequest<T>(type: T.Type, method: HTTPMethod, endPoint: Endpoint, parameters: [String: Any]?) -> AnyPublisher<DataResponse<T, NetworkError>, Never> where T: Codable
 }
 
 class NetworkService {
@@ -20,11 +20,22 @@ class NetworkService {
 
 extension NetworkService: NetworkServiceProtocol {
     
-    func sendRequest<T: Codable, Y: Codable>(type: T.Type, method: HTTPMethod, endPoint: Endpoint, parameters: Y?) -> AnyPublisher<DataResponse<T, NetworkError>, Never> {
-        let endpoint = Endpoint.login()
-        let headers = HTTPHeaders(endpoint.headers)
+    func sendRequest<T: Codable>(type: T.Type, method: HTTPMethod, endPoint: Endpoint, parameters: [String: Any]?) -> AnyPublisher<DataResponse<T, NetworkError>, Never> {
         
-        return AF.request(endpoint.url, method: method, parameters: parameters, headers: headers)
+        let headers = HTTPHeaders(endPoint.headers)
+        var encoding: ParameterEncoding = JSONEncoding.default
+        
+        switch method {
+        case .get:
+            encoding = URLEncoding(destination: .queryString, arrayEncoding: .noBrackets, boolEncoding: .literal)
+            // URLEncoding(destination: .httpBody, arrayEncoding: .noBrackets, boolEncoding: .literal)
+        default:
+            encoding = JSONEncoding.default
+        }
+        
+        print("response url: \(endPoint.url)")
+        
+        return AF.request(endPoint.url, method: method, parameters: parameters, encoding: encoding, headers: headers)
             .validate()
             .publishDecodable(type: T.self)
             .map { response in
@@ -35,35 +46,6 @@ extension NetworkService: NetworkServiceProtocol {
             }
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()
-    }
-    
-}
-
-class APIManager {
-    static let shared = APIManager()
-    
-    func doLogin(loginRequest: LoginRequest) -> AnyPublisher<DataResponse<LoginResponse, NetworkError>, Never> {
-        NetworkService.shared.sendRequest(type: LoginResponse.self, method: .post, endPoint: Endpoint.login(), parameters: loginRequest)
-    }
-    
-    func doRegister(registRequest: RegisterRequest) -> AnyPublisher<DataResponse<BalanceResponse, NetworkError>, Never> {
-        NetworkService.shared.sendRequest(type: RegisterReponse.self, method: .post, endPoint: Endpoint.register(), parameters: registRequest)
-    }
-    
-    func getBalance() -> AnyPublisher<DataResponse<BalanceResponse, NetworkError>, Never> {
-        NetworkService.shared.sendRequest(type: BalanceResponse.self, method: .get, endPoint: Endpoint.balance(), parameters: nil)
-    }
-    
-    func getTransactions() -> AnyPublisher<DataResponse<TransactionResponse, NetworkError>, Never> {
-        NetworkService.shared.sendRequest(type: TransactionResponse.self, method: .get, endPoint: Endpoint.transactions(), parameters: nil)
-    }
-    
-    func getPayees() -> AnyPublisher<DataResponse<PayeeReponse, NetworkError>, Never> {
-        NetworkService.shared.sendRequest(type: PayeeReponse.self, method: .get, endPoint: Endpoint.payees(), parameters: nil)
-    }
-    
-    func doTransfer(transferRequest: TransferRequest) -> AnyPublisher<DataResponse<BalanceResponse, NetworkError>, Never> {
-        NetworkService.shared.sendRequest(type: TransferResponse, method: .post, endPoint: Endpoint.transfer(), parameters: transferRequest)
     }
     
 }

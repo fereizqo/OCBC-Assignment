@@ -55,6 +55,12 @@
 		49ABAE5E28449A4F00C84322 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE5D28449A4F00C84322 /* Endpoint.swift */; };
 		49ABAE5F28449A4F00C84322 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE5D28449A4F00C84322 /* Endpoint.swift */; };
 		49ABAE6028449A4F00C84322 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE5D28449A4F00C84322 /* Endpoint.swift */; };
+		49ABAE6A2844AF6500C84322 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE692844AF6500C84322 /* APIManager.swift */; };
+		49ABAE6B2844AF6500C84322 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE692844AF6500C84322 /* APIManager.swift */; };
+		49ABAE6C2844AF6500C84322 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE692844AF6500C84322 /* APIManager.swift */; };
+		49ABAE6E2844AFE200C84322 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE6D2844AFE200C84322 /* LoginViewModel.swift */; };
+		49ABAE6F2844AFE200C84322 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE6D2844AFE200C84322 /* LoginViewModel.swift */; };
+		49ABAE702844AFE200C84322 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49ABAE6D2844AFE200C84322 /* LoginViewModel.swift */; };
 		49BF2369283C8BD600AAE27C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF2368283C8BD600AAE27C /* Extension.swift */; };
 		49BF236A283C8BD600AAE27C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF2368283C8BD600AAE27C /* Extension.swift */; };
 		49BF236B283C8BD600AAE27C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BF2368283C8BD600AAE27C /* Extension.swift */; };
@@ -128,6 +134,8 @@
 		49ABAE52284495F100C84322 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		49ABAE572844979100C84322 /* ServiceNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceNetwork.swift; sourceTree = "<group>"; };
 		49ABAE5D28449A4F00C84322 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		49ABAE692844AF6500C84322 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		49ABAE6D2844AFE200C84322 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		49BF2368283C8BD600AAE27C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		49BF236C283C8D9E00AAE27C /* TransactionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionResponse.swift; sourceTree = "<group>"; };
 		49BF2370283C8EE200AAE27C /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
@@ -212,7 +220,7 @@
 			path = Dropdown;
 			sourceTree = "<group>";
 		};
-		49A8B5BB283C3B730004C0A1 /* Views */ = {
+		49A8B5BB283C3B730004C0A1 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				49D67DB42839D91B00EBE443 /* ContentView.swift */,
@@ -222,7 +230,7 @@
 				49C35514283C698600B7F62A /* Dashboard */,
 				4970E5D0283C9B1A007A358C /* Transfer */,
 			);
-			path = Views;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		49A8B5BC283C3BA10004C0A1 /* Model */ = {
@@ -262,6 +270,7 @@
 			isa = PBXGroup;
 			children = (
 				49A8B5C4283C417F0004C0A1 /* LoginView.swift */,
+				49ABAE6D2844AFE200C84322 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -278,6 +287,7 @@
 			isa = PBXGroup;
 			children = (
 				49ABAE572844979100C84322 /* ServiceNetwork.swift */,
+				49ABAE692844AF6500C84322 /* APIManager.swift */,
 				49ABAE5D28449A4F00C84322 /* Endpoint.swift */,
 			);
 			path = Network;
@@ -320,7 +330,7 @@
 				49D67DB22839D91B00EBE443 /* OCBCAssignmentApp.swift */,
 				49A8B5BE283C3C840004C0A1 /* Helpers */,
 				49A8B5BC283C3BA10004C0A1 /* Model */,
-				49A8B5BB283C3B730004C0A1 /* Views */,
+				49A8B5BB283C3B730004C0A1 /* Scenes */,
 				49A8B5BD283C3BAD0004C0A1 /* Resources */,
 				49D67DB82839D91D00EBE443 /* Preview Content */,
 			);
@@ -616,6 +626,7 @@
 				49D67DB52839D91B00EBE443 /* ContentView.swift in Sources */,
 				4970E5D2283C9B78007A358C /* TransferView.swift in Sources */,
 				49ABAE582844979100C84322 /* ServiceNetwork.swift in Sources */,
+				49ABAE6A2844AF6500C84322 /* APIManager.swift in Sources */,
 				4970E5DC283D9FF8007A358C /* SquareSecureTextField.swift in Sources */,
 				49C35511283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				49A8B5C0283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
@@ -632,6 +643,7 @@
 				49ABAE5E28449A4F00C84322 /* Endpoint.swift in Sources */,
 				49ABAE53284495F100C84322 /* ErrorResponse.swift in Sources */,
 				4970E5FA283E009B007A358C /* SquareTextEditor.swift in Sources */,
+				49ABAE6E2844AFE200C84322 /* LoginViewModel.swift in Sources */,
 				4970E5F2283DBC48007A358C /* SquareDropdown.swift in Sources */,
 				49A8B5D3283C4A560004C0A1 /* RegisterView.swift in Sources */,
 				49BF2379283C905700AAE27C /* RegisterResponse.swift in Sources */,
@@ -654,8 +666,10 @@
 				49BF236E283C8D9E00AAE27C /* TransactionResponse.swift in Sources */,
 				4970E5D7283D1823007A358C /* DashboardRow.swift in Sources */,
 				49BF2372283C8EE200AAE27C /* LoginResponse.swift in Sources */,
+				49ABAE6F2844AFE200C84322 /* LoginViewModel.swift in Sources */,
 				49C35518283C699D00B7F62A /* DashboardView.swift in Sources */,
 				4970E5DD283D9FF8007A358C /* SquareSecureTextField.swift in Sources */,
+				49ABAE6B2844AF6500C84322 /* APIManager.swift in Sources */,
 				49BF236A283C8BD600AAE27C /* Extension.swift in Sources */,
 				49BF2376283C8FC600AAE27C /* BalanceResponse.swift in Sources */,
 				4970E5EA283DA96D007A358C /* DropdownRow.swift in Sources */,
@@ -681,6 +695,7 @@
 				49D67DD02839D91E00EBE443 /* OCBCAssignmentUITestsLaunchTests.swift in Sources */,
 				4970E5D4283C9B78007A358C /* TransferView.swift in Sources */,
 				49ABAE5A2844979100C84322 /* ServiceNetwork.swift in Sources */,
+				49ABAE6C2844AF6500C84322 /* APIManager.swift in Sources */,
 				4970E5DE283D9FF8007A358C /* SquareSecureTextField.swift in Sources */,
 				49C35513283C502000B7F62A /* ButtonStyle.swift in Sources */,
 				49A8B5C2283C3CCC0004C0A1 /* SquareTextField.swift in Sources */,
@@ -697,6 +712,7 @@
 				49ABAE6028449A4F00C84322 /* Endpoint.swift in Sources */,
 				49ABAE55284495F100C84322 /* ErrorResponse.swift in Sources */,
 				4970E5FC283E009B007A358C /* SquareTextEditor.swift in Sources */,
+				49ABAE702844AFE200C84322 /* LoginViewModel.swift in Sources */,
 				4970E5F4283DBC48007A358C /* SquareDropdown.swift in Sources */,
 				49A8B5D5283C4A560004C0A1 /* RegisterView.swift in Sources */,
 				49BF237B283C905700AAE27C /* RegisterResponse.swift in Sources */,

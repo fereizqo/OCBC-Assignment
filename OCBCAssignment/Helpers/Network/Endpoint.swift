@@ -26,12 +26,12 @@ struct Endpoint {
     }
     
     var headers: [String: String] {
-        return ["Content-type": "application/json",
+        return ["Content-Type": "application/json",
                 "Accept": "application/json"]
     }
     
     static func login() -> Self {
-        return Endpoint(path: "/login)")
+        return Endpoint(path: "/login")
     }
     
     static func register() -> Self {
