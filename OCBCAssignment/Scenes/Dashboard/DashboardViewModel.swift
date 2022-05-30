@@ -26,7 +26,6 @@ class DashboardViewModel: ObservableObject {
                     print("ERROR: \(error)")
                 } else if let transactionResponse = response.value, let data = transactionResponse.data {
                     self.transactionDictionary = data.groupedBy(dateComponents: [.day])
-                    print("DATA: \(self.transactionDictionary)")
                 }
             }.store(in: &cancellableSet)
     }

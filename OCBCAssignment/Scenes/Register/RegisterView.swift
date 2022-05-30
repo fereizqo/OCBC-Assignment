@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct RegisterView: View {
+    
     @State var textUser: String
     @State var textPassword: String
     @State var textPasswordConfirm: String
     @State var isAlertUser: Bool
     @State var isAlertPassword: Bool
     @State var isAlertPasswordConfirm: Bool
+    @ObservedObject var viewModel = RegisterViewModel()
     
     var body: some View {
         VStack {
@@ -31,7 +33,7 @@ struct RegisterView: View {
                 isAlertPassword = textPassword.count == 0
                 isAlertPasswordConfirm = textPassword != textPasswordConfirm
                 if !isAlertUser && !isAlertPassword && !isAlertPasswordConfirm {
-                    print("ACTION: register")
+                    viewModel.doRegister(username: textUser, password: textPassword)
                 }
             } label: {
                 Text("Register")

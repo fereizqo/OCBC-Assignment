@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TransferView: View {
+    
     @State var dataPayee: [DropdownData]
     @State var selectedPayee: DropdownData
     @State var textAmount: String
@@ -15,6 +16,7 @@ struct TransferView: View {
     @State var isAlertPayee: Bool
     @State var isAlertAmount: Bool
     @State var isAlertDesc: Bool
+    @ObservedObject var viewModel = TransferViewModel()
     
     let items = [
         Item(header: "Header 1", footer: "Footer 1", rows: ["A", "B", "C"]),
@@ -27,12 +29,12 @@ struct TransferView: View {
             ScrollView {
                 ZStack {
                     VStack(spacing: 20) {
-                        SquareDropdown(data: $dataPayee, isAlert: $isAlertPayee, selectedData: $selectedPayee, dialogTitleText: "Payee", alertText: "")
+                        SquareDropdown(data: $dataPayee, isAlert: $isAlertPayee, selectedData: $selectedPayee, dialogTitleText: "Payee", alertText: "Payee is required")
                             .zIndex(3)
                             .padding(.top)
-                        SquareTextField(text: $textAmount, isAlert: $isAlertAmount, dialogTitleText: "Amount", alertText: "", keyboardType: .numberPad)
+                        SquareTextField(text: $textAmount, isAlert: $isAlertAmount, dialogTitleText: "Amount", alertText: "Amount is required", keyboardType: .numberPad)
                             .zIndex(2)
-                        SquareTextEditor(text: $textDesc, isAlert: $isAlertDesc, dialogTitleText: "Description", alertText: "")
+                        SquareTextEditor(text: $textDesc, isAlert: $isAlertDesc, dialogTitleText: "Description", alertText: "Description is required")
                             .zIndex(1)
                             .padding(.bottom)
                     }
@@ -40,7 +42,12 @@ struct TransferView: View {
             }
             
             Button() {
-                print("test \(selectedPayee) \(textDesc)")
+                isAlertDesc = textDesc.count == 0
+                isAlertAmount = textAmount.count == 0
+                isAlertPayee = selectedPayee.value.count == 0
+                if !isAlertDesc && !isAlertAmount && !isAlertPayee {
+                    viewModel.doTransfer(receipAccountNo: "", amount: Double(textAmount) ?? 0, description: textDesc)
+                }
             } label: {
                 Text("Transfer Now")
                     .font(.title2)

@@ -24,6 +24,7 @@ class RegisterViewModel: ObservableObject {
                     print("ERROR: \(error)")
                 } else if let data = response.value {
                     self.registerResponse = data
+                    print("RESPONSE: \(data)")
                 }
             }.store(in: &cancellableSet)
     }
