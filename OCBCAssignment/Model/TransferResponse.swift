@@ -15,3 +15,9 @@ struct TransferResponse: Codable {
     let description: String?
     let recipientAccount: String?
 }
+
+struct TransferRequest: Codable {
+    let receipientAccountNo: String
+    let amount: Double
+    let description: String
+}
