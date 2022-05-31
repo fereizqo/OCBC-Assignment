@@ -47,7 +47,7 @@ struct DashboardView: View {
                                 Text("You have")
                                     .font(.body)
                                 .bold()
-                                Text("SGD \(viewModel.balanceResponse?.balance ?? 0)")
+                                Text("SGD \(viewModel.balanceResponse?.balance ?? 0, specifier: "%.2f")")
                                     .font(.title)
                                     .bold()
                             }
@@ -89,7 +89,7 @@ struct DashboardView: View {
                             ForEach(keys.indices) { index in
                                 Section(content: {
                                     ForEach(values[index], id: \.transactionID) { data in
-                                        DashboardRow(username: data.receipient.accountHolder)
+                                        DashboardRow(data: data)
                                     }
                                 }, header: {
                                     Text(keys[index].toString("dd MM YYYY", setLocalTimeZone: false))

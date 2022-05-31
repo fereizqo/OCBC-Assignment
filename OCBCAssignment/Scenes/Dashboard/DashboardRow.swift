@@ -8,22 +8,22 @@
 import SwiftUI
 
 struct DashboardRow: View {
-    var username: String
+    var data: TransactionData
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             HStack(alignment: .top) {
-                Text(username)
+                Text(data.receipient.accountHolder)
                     .font(.body)
                     .bold()
                 Spacer()
-                Text("1,200.00")
-                    .font(.headline)
+                Text("\(data.amount, specifier: "%.2f")")
+                    .font(.body)
                     .foregroundColor(.green)
                     .bold()
                 
             }
-            Text("4992-321-3321")
+            Text(data.receipient.accountNo)
                 .font(.caption)
                 .foregroundColor(.gray)
         }
@@ -32,7 +32,7 @@ struct DashboardRow: View {
 
 struct DashboardRow_Previews: PreviewProvider {
     static var previews: some View {
-        DashboardRow(username: "Jackie")
+        DashboardRow(data: TransactionData(transactionID: "123", amount: 10, transactionTime: "2022-03-12T15:13:58.927Z", datumDescription: "2022-03-12T15:13:58.927Z", transactionType: "test", receipient: Receipient(accountNo: "11", accountHolder: "111")))
             .previewLayout(.fixed(width: 300, height: 70))
     }
 }
