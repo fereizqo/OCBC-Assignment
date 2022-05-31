@@ -10,9 +10,10 @@ import Combine
 class TransferViewModel: ObservableObject {
     
     @Published var transferResponse: TransferResponse?
-    @Published var payeeResponse: PayeeReponse?
+    @Published var payeeData: [PayeeData] = []
     @Published var isLoading: Bool = false
     @Published var isApiAlert: Bool = false
+    @Published var isApiSuccessAlert: Bool = false
     @Published var alertText: String?
     
     private var cancellableSet: Set<AnyCancellable> = []
@@ -29,10 +30,13 @@ class TransferViewModel: ObservableObject {
             .sink { (response) in
                 self.isLoading = false
                 if let error = response.error {
+                    self.isApiSuccessAlert = false
                     self.isApiAlert = true
                     self.alertText = error.localizedDescription
                 } else if let data = response.value {
-                    self.isApiAlert = false
+                    self.isApiSuccessAlert = true
+                    self.isApiAlert = true
+                    self.alertText = "Your transfer is success"
                     self.transferResponse = data
                 }
             }.store(in: &cancellableSet)
@@ -46,9 +50,9 @@ class TransferViewModel: ObservableObject {
                 if let error = response.error {
                     self.isApiAlert = true
                     self.alertText = error.localizedDescription
-                } else if let data = response.value {
+                } else if let data = response.value, let payeedata = data.data {
                     self.isApiAlert = false
-                    self.payeeResponse = data
+                    self.payeeData = payeedata
                 }
             }.store(in: &cancellableSet)
     }

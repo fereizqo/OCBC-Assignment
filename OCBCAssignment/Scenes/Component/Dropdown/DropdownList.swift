@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct DropdownList: View {
-    var data: [DropdownData]
-    var onDataSelected: ((_ data: DropdownData) -> Void)?
+    var data: [PayeeData]
+    var onDataSelected: ((_ data: PayeeData) -> Void)?
     
     var body: some View {
         ScrollView {
@@ -34,8 +34,8 @@ struct DropdownList: View {
 struct DropdownList_Previews: PreviewProvider {
     static var previews: some View {
         DropdownList(data: [
-            DropdownData(key: "test 1", value: "test 1"),
-            DropdownData(key: "test 2", value: "test 2")
+            PayeeData(id: "12", name: "test", accountNo: "3241-123"),
+            PayeeData(id: "123", name: "test", accountNo: "3241-1232")
         ])
             .previewLayout(.fixed(width: 300, height: 200))
     }

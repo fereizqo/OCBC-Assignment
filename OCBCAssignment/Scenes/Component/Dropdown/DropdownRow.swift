@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct DropdownRow: View {
-    var datum: DropdownData
-    var onDataSelected: ((_ datum: DropdownData) -> Void)?
+    var datum: PayeeData
+    var onDataSelected: ((_ datum: PayeeData) -> Void)?
     
     var body: some View {
         Button(action: {
@@ -18,7 +18,7 @@ struct DropdownRow: View {
             }
         }, label: {
             HStack {
-                Text(self.datum.value)
+                Text(self.datum.accountNo)
                     .font(.body)
                     .foregroundColor(.black)
                 Spacer()
@@ -31,7 +31,7 @@ struct DropdownRow: View {
 
 struct DropdownRow_Previews: PreviewProvider {
     static var previews: some View {
-        DropdownRow(datum: DropdownData(key: "test", value: "test"))
+        DropdownRow(datum: PayeeData(id: "123", name: "aset", accountNo: "123-123"))
             .previewLayout(.fixed(width: 300, height: 70))
     }
 }

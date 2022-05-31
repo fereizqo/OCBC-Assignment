@@ -12,6 +12,7 @@ class RegisterViewModel: ObservableObject {
     @Published var registerResponse: RegisterReponse?
     @Published var isLoading: Bool = false
     @Published var isApiAlert: Bool = false
+    @Published var isApiSuccessAlert: Bool = false
     @Published var alertText: String?
     
     private var cancellableSet: Set<AnyCancellable> = []
@@ -28,9 +29,11 @@ class RegisterViewModel: ObservableObject {
                 self.isLoading = false
                 if let error = response.error {
                     self.isApiAlert = true
+                    self.isApiSuccessAlert = false
                     self.alertText = error.localizedDescription
                 } else if let data = response.value {
                     self.isApiAlert = true
+                    self.isApiSuccessAlert = true
                     self.alertText = "Your account [\(username)] is successfully created"
                     self.registerResponse = data
                 }

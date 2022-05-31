@@ -15,6 +15,10 @@ struct PayeeReponse: Codable {
 }
 
 // MARK: - Datum
-struct PayeeData: Codable {
-    let id, name, accountNo: String
+struct PayeeData: Codable, Hashable {
+    var id, name, accountNo: String
+    
+    public static func == (lhs: PayeeData, rhs: PayeeData) -> Bool {
+        return lhs.id == rhs.id
+    }
 }

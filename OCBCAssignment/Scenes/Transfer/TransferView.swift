@@ -9,8 +9,8 @@ import SwiftUI
 
 struct TransferView: View {
     
-    @State var dataPayee: [DropdownData]
-    @State var selectedPayee: DropdownData
+    @State var dataPayee: [PayeeData]
+    @State var selectedPayee: PayeeData
     @State var textAmount: String
     @State var textDesc: String
     @State var isAlertPayee: Bool
@@ -36,7 +36,11 @@ struct TransferView: View {
                     ScrollView {
                         ZStack {
                             VStack(spacing: 20) {
-                                SquareDropdown(data: $dataPayee, isAlert: $isAlertPayee, selectedData: $selectedPayee, dialogTitleText: "Payee", alertText: "Payee is required")
+                                SquareDropdown(data: $viewModel.payeeData,
+                                               isAlert: $isAlertPayee,
+                                               selectedData: $selectedPayee,
+                                               dialogTitleText: "Payee",
+                                               alertText: "Payee is required")
                                     .zIndex(3)
                                     .padding(.top)
                                 SquareTextField(text: $textAmount, isAlert: $isAlertAmount, dialogTitleText: "Amount", alertText: "Amount is required", keyboardType: .numberPad)
@@ -51,8 +55,7 @@ struct TransferView: View {
                     Button() {
                         isAlertDesc = textDesc.count == 0
                         isAlertAmount = textAmount.count == 0
-                        isAlertPayee = selectedPayee.value.count == 0
-                        if !isAlertDesc && !isAlertAmount && !isAlertPayee {
+                        if !isAlertDesc && !isAlertAmount {
                             viewModel.doTransfer(receipAccountNo: "", amount: Double(textAmount) ?? 0, description: textDesc)
                         }
                     } label: {
@@ -67,7 +70,7 @@ struct TransferView: View {
                 .navigationTitle("Transfer")
                 .navigationBarTitleDisplayMode(.large)
                 .alert(isPresented: $viewModel.isApiAlert) {
-                    Alert(title: Text("Error"),
+                    Alert(title: viewModel.isApiSuccessAlert ? Text("Success") : Text("Error"),
                           message: Text(viewModel.alertText ?? "Failed to fetch server"),
                           dismissButton: .default(Text("Ok")))
                 }
@@ -78,8 +81,8 @@ struct TransferView: View {
 
 struct TransferView_Previews: PreviewProvider {
     static var previews: some View {
-        TransferView(dataPayee: [DropdownData(key: "1", value: "1")],
-                     selectedPayee: DropdownData(key: "1", value: "1"),
+        TransferView(dataPayee: [PayeeData(id: "123", name: "Tes", accountNo: "123-123")],
+                     selectedPayee: PayeeData(id: "123", name: "Tes", accountNo: "123-123"),
                      textAmount: "",
                      textDesc: "",
                      isAlertPayee: false,

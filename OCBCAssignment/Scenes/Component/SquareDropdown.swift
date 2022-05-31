@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct SquareDropdown: View {
-    @Binding var data: [DropdownData]
+    @Binding var data: [PayeeData]
     @Binding var isAlert: Bool
-    @Binding var selectedData: DropdownData
+    @Binding var selectedData: PayeeData
     var dialogTitleText: String
     var alertText: String
     
@@ -37,10 +37,10 @@ struct SquareDropdown_Previews: PreviewProvider {
     static var previews: some View {
         SquareDropdown(
             data: .constant([
-                DropdownData(key: "test 1", value: "test 1")
+                PayeeData(id: "12", name: "test", accountNo: "123-123")
             ]),
             isAlert: .constant(true),
-            selectedData: .constant(DropdownData(key: "1", value: "1")),
+            selectedData: .constant(PayeeData(id: "23", name: "tes", accountNo: "123-123")),
             dialogTitleText: "Username",
             alertText: "")
             .previewLayout(.fixed(width: 400, height: 130))

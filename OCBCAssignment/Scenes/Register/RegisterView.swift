@@ -53,7 +53,7 @@ struct RegisterView: View {
                 .navigationTitle("Register")
                 .navigationBarTitleDisplayMode(.large)
                 .alert(isPresented: $viewModel.isApiAlert) {
-                    Alert(title: Text("Error"),
+                    Alert(title: viewModel.isApiSuccessAlert ? Text("Success") : Text("Error"),
                           message: Text(viewModel.alertText ?? "Failed to fetch server"),
                           dismissButton: .default(Text("Ok")))
                 }

@@ -107,10 +107,10 @@ struct DashboardView: View {
                         
                         NavigationLink(destination: TransferView(
                             dataPayee: [
-                                DropdownData(key: "1", value: "1"),
-                                DropdownData(key: "3", value: "3")
+                                PayeeData(id: "123", name: "test", accountNo: "123-123"),
+                                PayeeData(id: "12333", name: "test", accountNo: "123-123234"),
                             ],
-                            selectedPayee: DropdownData(key: "1", value: "1"),
+                            selectedPayee: PayeeData(id: "123", name: "test", accountNo: "123-123"),
                             textAmount: "",
                             textDesc: "",
                             isAlertPayee: false,

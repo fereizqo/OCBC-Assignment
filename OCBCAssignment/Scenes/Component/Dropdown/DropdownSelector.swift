@@ -9,11 +9,11 @@ import SwiftUI
 
 struct DropdownSelector: View {
     @State private var shouldShowDropdown = false
-    @State private var selected: DropdownData? = nil
-    @Binding var selectedData: DropdownData
+    @State private var selected: PayeeData? = nil
+    @Binding var selectedData: PayeeData
     var placeholder: String
-    var data: [DropdownData]
-    var onDataSelected: ((_ data: DropdownData) -> Void)?
+    var data: [PayeeData]
+    var onDataSelected: ((_ data: PayeeData) -> Void)?
     private let buttonHeight: CGFloat = 30
     
     var body: some View {
@@ -21,7 +21,7 @@ struct DropdownSelector: View {
             self.shouldShowDropdown.toggle()
         }, label: {
             HStack {
-                Text(selected == nil ? placeholder : selected!.value)
+                Text(selected == nil ? placeholder : selected!.id)
                     .font(.body)
                     .foregroundColor(selected == nil ? Color.gray : Color.black)
                 
@@ -58,14 +58,14 @@ struct DropdownSelector: View {
 }
 
 struct DropdownSelector_Previews: PreviewProvider {
-    static var onDataSelected: ((_ data: DropdownData) -> Void) = { _ in }
+    static var onDataSelected: ((_ data: PayeeData) -> Void) = { _ in }
     static var previews: some View {
         DropdownSelector(
-            selectedData: .constant(DropdownData(key: "1", value: "1")),
+            selectedData: .constant(PayeeData(id: "123", name: "Tes", accountNo: "123-123")),
             placeholder: "Test 1",
             data: [
-                DropdownData(key: "1", value: "1"),
-                DropdownData(key: "3", value: "3")
+                PayeeData(id: "123", name: "Tes", accountNo: "123-123"),
+                PayeeData(id: "123", name: "Tes", accountNo: "123-123")
             ],
             onDataSelected: onDataSelected
         )
