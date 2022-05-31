@@ -25,40 +25,54 @@ struct TransferView: View {
     ]
     
     var body: some View {
-        VStack {
-            ScrollView {
-                ZStack {
-                    VStack(spacing: 20) {
-                        SquareDropdown(data: $dataPayee, isAlert: $isAlertPayee, selectedData: $selectedPayee, dialogTitleText: "Payee", alertText: "Payee is required")
-                            .zIndex(3)
-                            .padding(.top)
-                        SquareTextField(text: $textAmount, isAlert: $isAlertAmount, dialogTitleText: "Amount", alertText: "Amount is required", keyboardType: .numberPad)
-                            .zIndex(2)
-                        SquareTextEditor(text: $textDesc, isAlert: $isAlertDesc, dialogTitleText: "Description", alertText: "Description is required")
-                            .zIndex(1)
-                            .padding(.bottom)
+        ZStack {
+            if viewModel.isLoading {
+                ProgressView()
+                    .tint(Color.black)
+                    .progressViewStyle(.circular)
+                    .background(Color.clear)
+            } else {
+                VStack {
+                    ScrollView {
+                        ZStack {
+                            VStack(spacing: 20) {
+                                SquareDropdown(data: $dataPayee, isAlert: $isAlertPayee, selectedData: $selectedPayee, dialogTitleText: "Payee", alertText: "Payee is required")
+                                    .zIndex(3)
+                                    .padding(.top)
+                                SquareTextField(text: $textAmount, isAlert: $isAlertAmount, dialogTitleText: "Amount", alertText: "Amount is required", keyboardType: .numberPad)
+                                    .zIndex(2)
+                                SquareTextEditor(text: $textDesc, isAlert: $isAlertDesc, dialogTitleText: "Description", alertText: "Description is required")
+                                    .zIndex(1)
+                                    .padding(.bottom)
+                            }
+                        }
                     }
+                    
+                    Button() {
+                        isAlertDesc = textDesc.count == 0
+                        isAlertAmount = textAmount.count == 0
+                        isAlertPayee = selectedPayee.value.count == 0
+                        if !isAlertDesc && !isAlertAmount && !isAlertPayee {
+                            viewModel.doTransfer(receipAccountNo: "", amount: Double(textAmount) ?? 0, description: textDesc)
+                        }
+                    } label: {
+                        Text("Transfer Now")
+                            .font(.title2)
+                            .bold()
+                            .foregroundColor(.white)
+                    }
+                    .buttonStyle(BlackButton())
+                    
+                }
+                .navigationTitle("Transfer")
+                .navigationBarTitleDisplayMode(.large)
+                .alert(isPresented: $viewModel.isApiAlert) {
+                    Alert(title: Text("Error"),
+                          message: Text(viewModel.alertText ?? "Failed to fetch server"),
+                          dismissButton: .default(Text("Ok")))
                 }
             }
-            
-            Button() {
-                isAlertDesc = textDesc.count == 0
-                isAlertAmount = textAmount.count == 0
-                isAlertPayee = selectedPayee.value.count == 0
-                if !isAlertDesc && !isAlertAmount && !isAlertPayee {
-                    viewModel.doTransfer(receipAccountNo: "", amount: Double(textAmount) ?? 0, description: textDesc)
-                }
-            } label: {
-                Text("Transfer Now")
-                    .font(.title2)
-                    .bold()
-                    .foregroundColor(.white)
-            }
-            .buttonStyle(BlackButton())
-            
         }
-        .navigationTitle("Transfer")
-        .navigationBarTitleDisplayMode(.large)
     }
 }
 

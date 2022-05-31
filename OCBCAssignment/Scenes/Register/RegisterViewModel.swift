@@ -10,6 +10,10 @@ import Combine
 class RegisterViewModel: ObservableObject {
     
     @Published var registerResponse: RegisterReponse?
+    @Published var isLoading: Bool = false
+    @Published var isApiAlert: Bool = false
+    @Published var alertText: String?
+    
     private var cancellableSet: Set<AnyCancellable> = []
     var apiManager: APIManagerProtocol
     
@@ -18,13 +22,17 @@ class RegisterViewModel: ObservableObject {
     }
     
     func doRegister(username: String, password: String) {
+        isLoading = true
         apiManager.doRegister(registRequest: RegisterRequest(username: username, password: password))
             .sink { (response) in
+                self.isLoading = false
                 if let error = response.error {
-                    print("ERROR: \(error)")
+                    self.isApiAlert = true
+                    self.alertText = error.localizedDescription
                 } else if let data = response.value {
+                    self.isApiAlert = true
+                    self.alertText = "Your account [\(username)] is successfully created"
                     self.registerResponse = data
-                    print("RESPONSE: \(data)")
                 }
             }.store(in: &cancellableSet)
     }
