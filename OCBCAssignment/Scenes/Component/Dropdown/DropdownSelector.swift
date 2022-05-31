@@ -21,7 +21,7 @@ struct DropdownSelector: View {
             self.shouldShowDropdown.toggle()
         }, label: {
             HStack {
-                Text(selected == nil ? placeholder : selected!.id)
+                Text(selected == nil ? placeholder : selected!.accountNo)
                     .font(.body)
                     .foregroundColor(selected == nil ? Color.gray : Color.black)
                 

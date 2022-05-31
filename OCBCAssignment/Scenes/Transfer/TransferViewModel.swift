@@ -26,8 +26,9 @@ class TransferViewModel: ObservableObject {
     
     func doTransfer(receipAccountNo: String, amount: Double, description: String) {
         isLoading = true
-        apiManager.doTransfer(transferRequest: TransferRequest(receipientAccountNo: receipAccountNo, amount: amount, description: description))
+        apiManager.doTransfer(transferRequest: TransferRequest(receipientAccountNo: receipAccountNo, amount: Int(amount), description: description))
             .sink { (response) in
+                print(response)
                 self.isLoading = false
                 if let error = response.error {
                     self.isApiSuccessAlert = false

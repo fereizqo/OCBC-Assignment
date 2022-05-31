@@ -56,7 +56,7 @@ struct TransferView: View {
                         isAlertDesc = textDesc.count == 0
                         isAlertAmount = textAmount.count == 0
                         if !isAlertDesc && !isAlertAmount {
-                            viewModel.doTransfer(receipAccountNo: "", amount: Double(textAmount) ?? 0, description: textDesc)
+                            viewModel.doTransfer(receipAccountNo: selectedPayee.accountNo, amount: Double(textAmount) ?? 0, description: textDesc)
                         }
                     } label: {
                         Text("Transfer Now")
