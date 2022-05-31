@@ -47,7 +47,7 @@ struct DashboardView: View {
                                 Text("You have")
                                     .font(.body)
                                 .bold()
-                                Text("SGD 10,000.00")
+                                Text("SGD \(viewModel.balanceResponse?.balance ?? 0)")
                                     .font(.title)
                                     .bold()
                             }
@@ -55,7 +55,7 @@ struct DashboardView: View {
                                 Text("Account No")
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
-                                Text("3213-321-123")
+                                Text("\(viewModel.balanceResponse?.accountNo ?? "")")
                                     .font(.body)
                                     .bold()
                             }
@@ -63,7 +63,7 @@ struct DashboardView: View {
                                 Text("Account Holder")
                                     .font(.subheadline)
                                     .foregroundColor(.gray)
-                                Text("Johny Depp")
+                                Text("\(viewModel.username)")
                                     .font(.body)
                                     .bold()
                             }
