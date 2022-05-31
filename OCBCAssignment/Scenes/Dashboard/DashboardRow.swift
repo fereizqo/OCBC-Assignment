@@ -17,10 +17,17 @@ struct DashboardRow: View {
                     .font(.body)
                     .bold()
                 Spacer()
-                Text("\(data.amount, specifier: "%.2f")")
-                    .font(.body)
-                    .foregroundColor(.green)
-                    .bold()
+                if data.transactionType == "transfer" {
+                    Text("- \(data.amount, specifier: "%.2f")")
+                        .font(.body)
+                        .foregroundColor(.gray)
+                        .bold()
+                } else if data.transactionType == "received" {
+                    Text("\(data.amount, specifier: "%.2f")")
+                        .font(.body)
+                        .foregroundColor(.green)
+                        .bold()
+                }
                 
             }
             Text(data.receipient.accountNo)
